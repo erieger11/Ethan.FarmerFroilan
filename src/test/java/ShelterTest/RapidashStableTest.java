@@ -15,7 +15,7 @@ public class RapidashStableTest {
     RapidashStable stable = new RapidashStable();
     Rapidash skipper = new Rapidash();
 
-    stable.add(stable);
+    stable.add(skipper);
 
     Integer expected = 1;
     Integer actual = nest.size();
