@@ -62,14 +62,6 @@ public class CropTest {
         CropRow<P> cr = new CropRow();
 
     }
-
-
-
-
-
-
-
-
 }
 
 
