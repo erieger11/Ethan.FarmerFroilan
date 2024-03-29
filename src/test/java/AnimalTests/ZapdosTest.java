@@ -69,9 +69,18 @@ public class ZapdosTest {
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void zapdosEventTest() {
-        if(stormChance =< 5){
-
+    public void zapdosEventTest1() {
+        Field field = new Field;
+        Zapdos zapdos = new Zapdos(null, null, null);
+        stormChance = 3
+        if(stormChance =< 7){
+            thunderStormEvent();
         }
+        Assert.assertTrue(field.beenWatered());
+    }
+    @Test
+    public void thunderStormEventTest(){
+        Field field = new Field;
+        Assert.assertTrue(field.beenWatered());
     }
 }
