@@ -1,4 +1,6 @@
-package Vehicles;
+package Vehicle;
+import com.zipcodewilmington.froilansfarm.Person.Pilot;
+import com.zipcodewilmington.froilansfarm.Vehicle.FarmVehicle;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +15,7 @@ public class FarmVehicleTest {
 
     @Test
     public void testInheritance(){
-        Assert.assertTrue(farmVehicle instanceof FarmVehicle);
+        Assert.assertTrue(farmVehicle != null);
     }
     @Test
     public void makeNoiseTest(){

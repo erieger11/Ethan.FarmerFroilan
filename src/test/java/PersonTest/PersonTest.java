@@ -1,9 +1,12 @@
 package PersonTest;
 
+import Animals.Animal;
+import com.zipcodewilmington.froilansfarm.Person.Pilot;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import sun.font.TrueTypeFont;
+
+import static java.lang.Character.getName;
 
 public class PersonTest {
     Person person;
@@ -24,7 +27,7 @@ public class PersonTest {
         person.add(person);
         String actualPerson = getName();
 
-        Assert.assertTrue(expectedPerson, actualPerson);
+        Assert.assertTrue(expectedPerson, Boolean.parseBoolean(actualPerson));
     }
     @Test
     public void setNameTest(){;
