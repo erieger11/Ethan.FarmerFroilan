@@ -1,22 +1,27 @@
 package ShelterTest;
+
+import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Animals.Charizard;
+import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class BulbasaurMeadowTest {
 
   @Test
   public void meadowIsShelter() {
-    BulbasaurMeadow meadow = new BulbasaurMeadow();
+    Shelter<Bulbasaur> meadow = new Shelter();
 
     Assert.assertTrue(meadow instanceof Shelter);
   }
 
   @Test
   public void addBulbasaur() {
-    BulbasaurMeadow meadow = new BulbasaurMeadow();
-    Bulbasaur bulby = new Bulbasaur();
+    Shelter<Bulbasaur> meadow = new Shelter();
+    Bulbasaur b = new Bulbasaur(null, null, null);
 
-    meadow.add(bulby);
+    meadow.add(b);
 
     Integer actual = 1;
     Integer expected = meadow.size();
@@ -27,11 +32,11 @@ public class BulbasaurMeadowTest {
 
   @Test
   public void removeBulbasaur() {
-    BulbasaurMeadow meadow = new BulbasaurMeadow();
-    Bulbasaur bulby = new Bulbasaur();
+    Shelter<Bulbasaur> meadow = new Shelter();
+    Bulbasaur b = new Bulbasaur(null, null, null);
 
-    meadow.add(bulby);
-    meadow.remove(bulby);
+    meadow.add(b);
+    meadow.remove(b);
 
     Integer expected = 0;
     Integer actual = meadow.size();
@@ -40,13 +45,14 @@ public class BulbasaurMeadowTest {
   }
 
   @Test
-  public void bulbasaursOnly() {
-    BulbasaurMeadow meadow = new BulbasaurMeadow();
-    Bulbasaur bulby = new Bulbasaur();
-    Charizard draco = new Charizard();
+  public void getMembers() {
+    Shelter<Bulbasaur> meadow = new Shelter();
+    Bulbasaur b = new Bulbasaur(null, null, null); // not sure if it's gonna print out with these values!
 
-    meadow.add(bulby, draco);
+    meadow.add(b);
+    String expected = "b";
+    String actual = meadow.toString();
 
-    Assert.assertThrows(new ClassCastException.class); // something like that. might have to make this expected
-  }
+    Assert.assertEquals(expected, actual);
+    }
   }
