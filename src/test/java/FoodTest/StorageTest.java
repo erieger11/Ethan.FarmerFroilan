@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class StorageTest
 {
 //    Storage storage = new Storage();
-    HashMap<String, Integer> storage = new HashMap<>();
+    HashMap<Object, Integer> storage = new HashMap<>();
     storage.put(apple, 5);
     storage.put(dragonfruit, 5);
     storage.put(earCorn, 5);
