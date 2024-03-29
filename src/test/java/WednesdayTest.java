@@ -7,14 +7,15 @@ public class WednesdayTest
     public void wednesdayTest()
     {
         @Test
-        public void testCropDusterFly()
+        public void testCropDusterFly();
+
     {
         //setup();
         Boolean actual = cropDuster.fly(field);
         Assert.assertTrue(actual);
     }
         @Test
-        public void testCropDusterFertilize()
+        public void testCropDusterFertilize();
     {
         //setup();
         Boolean actual = cropDuster.fertilize(cropRow1);

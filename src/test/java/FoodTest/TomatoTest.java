@@ -33,7 +33,7 @@ public class TomatoTest
 
         //Then
         Integer expected = 0;
-        Integer actual = storage.getValue;
+        Integer actual = storage.getValue();
 
         Assert.assertEquals(expected, actual);
     }
