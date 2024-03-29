@@ -1,6 +1,9 @@
 package AnimalTests;
+import com.zipcodewilmington.froilansfarm.Animals.Togekiss;
 import org.junit.Assert;
 import org.junit.Test;
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
+
 
 public class TogeKissTest {
     @Test
@@ -48,7 +51,7 @@ public class TogeKissTest {
         Double expected = 0.0468;
 
         togekiss.setId(expected);
-        String actual = togekiss.getId();
+        Double actual = togekiss.getId();
 
         Assert.assertEquals(expected, actual);
     }

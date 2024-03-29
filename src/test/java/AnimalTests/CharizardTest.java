@@ -1,6 +1,9 @@
 package AnimalTests;
+import com.zipcodewilmington.froilansfarm.Animals.Charizard;
 import org.junit.Assert;
 import org.junit.Test;
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
+
 public class CharizardTest {
     @Test
     public void constructorTest() {
@@ -47,7 +50,7 @@ public class CharizardTest {
         Double expected = 0.0006;
 
         charizard.setId(expected);
-        String actual = charizard.getId();
+        Double actual = charizard.getId();
 
         Assert.assertEquals(expected, actual);
     }
@@ -65,7 +68,7 @@ public class CharizardTest {
     public void makeNoiseTest() {
         Charizard charizard = new Charizard(null, null, null);
         String expected = "RAWRRRRR!!!";
-        String actual = bulbasaur.makeNoise();
+        String actual = charizard.makeNoise();
         Assert.assertEquals(expected, actual);
     }
     @Test

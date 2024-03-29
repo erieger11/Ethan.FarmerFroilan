@@ -1,6 +1,9 @@
 package AnimalTests;
+import com.zipcodewilmington.froilansfarm.Animals.Miltank;
 import org.junit.Assert;
 import org.junit.Test;
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
+
 
 public class MiltankTest {
     @Test
@@ -48,7 +51,7 @@ public class MiltankTest {
         Double expected = 0.0241;
 
         miltank.setId(expected);
-        String actual = miltank.getId();
+        Double actual = miltank.getId();
 
         Assert.assertEquals(expected, actual);
     }
