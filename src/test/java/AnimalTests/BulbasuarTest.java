@@ -73,9 +73,9 @@ public class BulbasuarTest {
 
     @Test
     public void fertilizeCropRowTest() {
-        // Given
         Bulbasaur bulbasaur = new Bulbasaur(null, null, null);
-
+        bulbasaur.fertilize(cropRow);
+        Assert.assertTrue(cropRow.beenFertalized());
     }
 
 }

@@ -72,6 +72,8 @@ public class SquirtleTest {
     @Test
     public void waterCropRowTest() {
         Squirtle squirtle = new Squirtle(null, null, null);
+        squirtle.waterCrop(cropRow);
+        Assert.assertTrue(cropRow.beenWatered());
 
     }
 
