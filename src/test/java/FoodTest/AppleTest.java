@@ -1,9 +1,10 @@
 package FoodTest;
+import com.zipcodewilmington.froilansfarm.Food.Apple;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class AppleTest
 {
