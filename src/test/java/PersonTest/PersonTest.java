@@ -9,7 +9,7 @@ public class PersonTest {
     Person person;
     @Before
     public void setup(){
-        person = new Person;
+        person = new Person();
     }
     @Test
     public void testInheritance() {

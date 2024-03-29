@@ -46,6 +46,6 @@ public class RapidashStableTest {
 
     stable.add(blitz, bulby);
 
-    Assert.assertThrows(new ClassCastException. class);
+    Assert.assertThrows(new ClassCastException class);
   }
 }
