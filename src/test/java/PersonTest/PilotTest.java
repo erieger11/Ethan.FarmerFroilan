@@ -1,13 +1,20 @@
 package PersonTest;
+import Vehicles.CropDusterTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 public class PilotTest {
-    Rider rider = new Rider;
+    Rider rider;
+    Pilot pilot;
+    CropDuster cropDuster;
+    CropRow cropRow;
 
     @Before
     public void setup(){
         rider = new Rider();
+        pilot = new Pilot();
+        cropDuster = new CropDuster();
+        cropRow = new CropRow();
     }
 
     @Test
@@ -16,22 +23,38 @@ public class PilotTest {
     }
 
     @Test
-    public void harvestTest(){
-        crop.harvest();
-        Assert.assertTrue();
+    public void makeNoiseTest(){
+        String noise = pilot.makeNoise();
+
+        Assert.assertEquals("Weee!", noise);
     }
-    @Test
-    public void makeNoiseTest(){}
     @Test
     public void addRiderTest(){
-        Person.add(Rider);
+        cropDuster.addRider(pilot);
+
+        Assert.assertTrue(cropDuster.hasPilot);
     }
     @Test
-    public void removeRiderTest(){}
+    public void removeRiderTest(){
+        cropDuster.addRider(pilot);
+        cropDuster.removeRider();
+
+        Assert.assertFalse(cropDuster.hasPilot);
+    }
     @Test
-    public void fertilizeTest(){}
+    public void fertilizeTest(){
+        cropDuster.addRider(pilot);
+        cropDuster.fertilize(cropRow);
+
+        Assert.assertTrue(cropRow.beenFertalized());
+
+    }
     @Test
-    public void mountTest(){}
-    @Test
-    public void hasRiddenTest(){}
+    public void mountTest(){
+        cropDuster.addRider(pilot);
+        cropDuster.hasBeenRidden();
+
+        Assert.assertTrue(cropDuster.hasBeenRidden());
+    }
+
 }

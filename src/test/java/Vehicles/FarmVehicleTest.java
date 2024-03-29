@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 public class FarmVehicleTest {
     FarmVehicle farmVehicle;
+    Pilot pilot;
 
     @Before
     public void setup(){
@@ -15,9 +16,22 @@ public class FarmVehicleTest {
         Assert.assertTrue(farmVehicle instanceof FarmVehicle);
     }
     @Test
-    public void makeNoiseTest(){}
+    public void makeNoiseTest(){
+        farmVehicle.fly();
+        String noise = farmVehicle.makeNoise();
+
+        Assert.assertEquals("Vroom", noise);
+    }
     @Test
-    public void addRiderTest(){}
+    public void addRiderTest(){
+        farmVehicle.addRider(pilot);
+        Assert.assertTrue(farmVehicle.hasRidder());
+    }
     @Test
-    public void removeRiderTest(){}
+    public void removeRiderTest(){
+        farmVehicle.addRider(pilot);
+        farmVehicle.removeRider();
+
+        Assert.assertFalse(farmVehicle.haspilot);
+    }
 }
