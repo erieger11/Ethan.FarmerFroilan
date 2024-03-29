@@ -1,6 +1,9 @@
 package AnimalTests;
+import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
 import org.junit.Assert;
 import org.junit.Test;
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
+
 public class RapidashTest {
     @Test
     public void constructorTest() {
@@ -47,7 +50,7 @@ public class RapidashTest {
         Double expected = 0.0078;
 
         rapidash.setId(expected);
-        String actual = rapidash.getId();
+        Double actual = rapidash.getId();
 
         Assert.assertEquals(expected, actual);
     }

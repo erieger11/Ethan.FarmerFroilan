@@ -1,4 +1,6 @@
 package AnimalTests;
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
+import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -49,7 +51,7 @@ public class BulbasuarTest {
         Double expected = 0.0001;
 
         bulbasaur.setId(expected);
-        String actual = bulbasaur.getId();
+        Double actual = bulbasaur.getId();
 
         Assert.assertEquals(expected, actual);
     }

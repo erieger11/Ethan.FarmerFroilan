@@ -1,6 +1,9 @@
 package AnimalTests;
+import com.zipcodewilmington.froilansfarm.Animals.Squirtle;
 import org.junit.Assert;
 import org.junit.Test;
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
+
 
 public class SquirtleTest {
     @Test
@@ -48,7 +51,7 @@ public class SquirtleTest {
         Double expected = 0.0007;
 
         squirtle.setId(expected);
-        String actual = squirtle.getId();
+        Double actual = squirtle.getId();
 
         Assert.assertEquals(expected, actual);
     }
@@ -76,5 +79,4 @@ public class SquirtleTest {
         Assert.assertTrue(cropRow.beenWatered());
 
     }
-
 }

@@ -1,6 +1,9 @@
 package AnimalTests;
+import com.zipcodewilmington.froilansfarm.Animals.Zapdos;
 import org.junit.Assert;
 import org.junit.Test;
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
+
 
 public class ZapdosTest {
     @Test
@@ -48,7 +51,7 @@ public class ZapdosTest {
         Double expected = 0.0145;
 
         zapdos.setId(expected);
-        String actual = zapdos.getId();
+        Double actual = zapdos.getId();
         Assert.assertEquals(expected, actual);
     }
     @Test

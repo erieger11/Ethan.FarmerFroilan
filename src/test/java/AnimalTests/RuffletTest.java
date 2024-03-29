@@ -1,6 +1,9 @@
 package AnimalTests;
+import com.zipcodewilmington.froilansfarm.Animals.Rufflet;
 import org.junit.Assert;
 import org.junit.Test;
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
+
 
 public class RuffletTest {
     @Test
@@ -48,7 +51,7 @@ public class RuffletTest {
         Double expected = 0.0627;
 
         rufflet.setId(expected);
-        String actual = rufflet.getId();
+        Double actual = rufflet.getId();
 
         Assert.assertEquals(expected, actual);
     }
