@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Food;
 
-public class Tomato
-{
+public class Apple extends Edible {
 
 }

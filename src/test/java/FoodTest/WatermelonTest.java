@@ -1,5 +1,6 @@
 package FoodTest;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
+import com.zipcodewilmington.froilansfarm.Food.Watermelon;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -2,14 +2,14 @@ package FoodTest;
 package com.zipcodewilmington.froilansfarm.crops.edibles;
 
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
-import com.zipcodewilmington.froilansfarm.crops.edibles.Tomato;
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
+//import com.zipcodewilmington.froilansfarm.crops.edibles.Tomato;
+//import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import org.junit.Assert;
 import jdk.jfr.snippets.Snippets;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+
+import static org.junit.Assert.*;
 
 public class TomatoTest
 {
@@ -33,7 +33,7 @@ public class TomatoTest
 
         //Then
         Integer expected = 0;
-        Integer actual = storage.getValue;
+        Integer actual = storage.getValue();
 
         Assert.assertEquals(expected, actual);
     }
