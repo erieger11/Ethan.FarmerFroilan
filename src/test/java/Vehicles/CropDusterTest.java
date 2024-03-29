@@ -2,7 +2,8 @@ package Vehicles;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-public class CropDusterTest  {
+public class CropDusterTest
+{
     CropDuster cropDuster;
     Pilot pilot;
 
