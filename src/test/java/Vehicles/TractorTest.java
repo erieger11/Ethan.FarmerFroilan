@@ -21,10 +21,23 @@ public class TractorTest {
         Assert.assertTrue(True);
     }
     @Test
-    public void makeNoiseTest(){}
+    public void makeNoiseTest(){
+        tractor.fly();
+        String noise = tractor.makeNoise();
+
+        Assert.assertEquals("Vroom", noise);
+    }
     @Test
-    public void addRiderTest(){}
+    public void addRiderTest(){
+        tractor.addRider(pilot);
+        tractor.removeRider();
+        Assert.assertFalse(tractor.haspilot);
+    }
     @Test
-    public void removeRiderTest(){}
+    public void removeRiderTest(){
+        tractor.addRider(pilot);
+        tractor.fertilize(cropRow);
+        Assert.assertTrue(tractor.beenFertalized());
+    }
 
 }
