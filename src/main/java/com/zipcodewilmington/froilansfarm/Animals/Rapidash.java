@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Animals;
+import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Rideable_Interface;
 
 public class Rapidash extends Animal implements Rideable_Interface {
+    public boolean hasBeenRidden;
     String type;
     Double id;
     public Rapidash(String name,String type, Double id) {
@@ -9,6 +11,10 @@ public class Rapidash extends Animal implements Rideable_Interface {
         this.type = type;
         this.id = id;
     }
+
+
+
+
     public void setName(String name){
         this.name = name;
     }
@@ -26,5 +32,8 @@ public class Rapidash extends Animal implements Rideable_Interface {
     }
     public Double getId(){
         return id;
+    }
+
+    public void addRider(Person froilan) {
     }
 }

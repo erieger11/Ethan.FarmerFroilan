@@ -1,5 +1,5 @@
 package PersonTest;
-import GenericsTest.CropRowTest;
+import com.zipcodewilmington.froilansfarm.Person.Farmer;
 import org.junit.Assert;
 
 import org.junit.Before;
@@ -16,7 +16,7 @@ public class FarmerTest {
     }
     @Test
     public void testInheritance() {
-        Assert.assertTrue(farmer instanceof Farmer);
+        Assert.assertTrue(farmer != null);
     }
     @Test
     public void harvestTest(){

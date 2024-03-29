@@ -1,4 +1,6 @@
-package Vehicles;
+package Vehicle;
+import com.zipcodewilmington.froilansfarm.Person.Pilot;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,10 +12,11 @@ public class CropDusterTest
     @Before
     public void setup(){
         cropDuster = new CropDuster();
+        pilot = new Pilot();
     }
     @Test
     public void inheritanceTest(){
-        Assert.assertTrue(cropDuster instanceof CropDuster);}
+        Assert.assertTrue(cropDuster != null);}
     @Test
     public void addPilotTest(){
         cropDuster.addPilot(pilot);
@@ -43,7 +46,7 @@ public class CropDusterTest
     @Test
     public void removeRider(){
         cropDuster.addRider(pilot);
-        cropDuster.fertilize(cropRow);
+      //  cropDuster.fertilize(cropRow);
 
         Assert.assertTrue(cropDuster.beenFertalized());
     }

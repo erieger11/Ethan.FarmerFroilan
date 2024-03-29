@@ -2,8 +2,8 @@ package com.zipcodewilmington.froilansfarm.TheInterfaces;
 
 public interface Botanist_Interface {
 
-    void fertalize(){}
+    default void fertalize(){}
 
-    void plant(){}
+    default void plant(){}
 
 }
