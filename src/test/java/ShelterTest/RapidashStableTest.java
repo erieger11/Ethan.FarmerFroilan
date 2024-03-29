@@ -1,8 +1,11 @@
 package ShelterTest;
+import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
+import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class RapidashStableTest {
+public class RapidashStableTest<RapidashStable> {
   @Test
   public void stableIsShelter() {
     RapidashStable stable = new RapidashStable();
@@ -44,8 +47,8 @@ public class RapidashStableTest {
     Rapidash blitz = new Rapidash();
     Bulbasaur bulby = new Bulbasaur();
 
-    stable.add(blitz, bulby);
+    stable.add(blitz);
 
-    Assert.assertThrows(new ClassCastException class);
+    Assert.assertThrows(ClassCastException.class, stable.add(bulby));
   }
 }
