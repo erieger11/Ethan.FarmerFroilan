@@ -1,5 +1,8 @@
 package ShelterTest;
+import Animals.Animal;
 import org.junit.Test;
 
-public class ShelterTest {
-}
+import java.util.List;
+
+
+

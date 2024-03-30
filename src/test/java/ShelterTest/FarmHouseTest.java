@@ -1,53 +1,55 @@
 package ShelterTest;
+import Shelter.FarmHouse;
+import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Animals.Charizard;
+import com.zipcodewilmington.froilansfarm.Person.Person;
+import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class FarmHouseTest {
-  @Test
-  public void farmHouseisShelter() {
-    FarmHouse farmhouse = new FarmHouse();
-
-    Assert.assertTrue(farmhouse instanceof Shelter);
-  }
 
   @Test
-  public void addBulbasaur() {
-    FarmHouse farmhouse = new FarmHouse();
-    Person froilan = new Person();
+  public void farmHouseIsShelter() {
+    Shelter<Person> farmHouse = new Shelter();
 
-    farmhouse.add(froilan);
-
-    Integer actual = 1;
-    Integer expected = froilan.size();
-
-    Assert.assertEquals(expected, actual);
+    Assert.assertTrue(Person instanceof Shelter);
   }
-
-
   @Test
-  public void removeBulbasaur() {
-    FarmHouse farmhouse = new FarmHouse();
-    Person froilan = new Person();
-    Person froilanda = new Person();
+    public void addPerson() {
+      Shelter<Person> farmHouse = new Shelter();
+      Person p = new Person();
 
-    farmhouse.add(froilan, froilanda);
-    froilan.remove(froilanda);
+      farmHouse.add(p);
 
-    Integer expected = 1;
-    Integer actual = farmhouse.size();
+      Integer actual = 1;
+      Integer expected = farmHouse.size();
 
-    Assert.assertEquals(expected, actual);
+      Assert.assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void removePerson() {
+      Shelter<Person> farmHouse = new Shelter();
+      Person p = new Person();
+
+      farmHouse.add(p);
+      farmHouse.remove(p);
+
+      Integer expected = 0;
+      Integer actual = farmHouse.size();
+
+      Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void getMembers() {
+      Shelter<Person> farmHouse = new Shelter();
+      Person p = new Person();
+
+      farmHouse.add(p);
+
+      String expected = "p";
+      String actual = farmHouse.toString();
+    }
   }
-
-  @Test
-  public void bulbasaursOnly() {
-    FarmHouse farmhouse = new FarmHouse();
-    Person froilan = new Person();
-    Charizard draco = new Charizard();
-
-    farmhouse.add(froilan, draco);
-
-    Assert.assertThrows(new ClassCastException.class); // something like that. might have to make this expected
-  }
-
-}

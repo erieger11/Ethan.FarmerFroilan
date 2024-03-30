@@ -1,54 +1,49 @@
 package ShelterTest;
-import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Animals.Charizard;
 import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
 import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class RapidashStableTest<RapidashStable> {
-  @Test
-  public void stableIsShelter() {
-    RapidashStable stable = new RapidashStable();
-
-    Assert.assertTrue(stable instanceof Shelter);
-  }
-
+public class RapidashStableTest {
   @Test
   public void addRapidash() {
-    RapidashStable stable = new RapidashStable();
-    Rapidash skipper = new Rapidash();
+    Shelter<Rapidash> stable = new Shelter();
+    Rapidash r = new Rapidash(null, null, null);
 
-    stable.add(skipper);
+    stable.add(r);
 
-    Integer expected = 1;
-    Integer actual = nest.size();
+    Integer actual = 1;
+    Integer expected = stable.size();
 
     Assert.assertEquals(expected, actual);
   }
 
+
   @Test
-  public void removeTogekiss() {
-    RapidashStable stable = new RapidashStable();
-    Rapidash blitz = new Rapidash();
-    Rapidash skipper = new Rapidash();
+  public void removeRapidash() {
+    Shelter<Rapidash> stable = new Shelter();
+    Rapidash r = new Rapidash(null, null, null);
 
-    stable.add(blitz, skipper);
-    stable.remove(blitz);
+    stable.add(r);
+    stable.remove(r);
 
-    Integer expected = 1;
+    Integer expected = 0;
     Integer actual = stable.size();
 
     Assert.assertEquals(expected, actual);
   }
 
   @Test
-  public void onlyTogekiss() {
-    RapidashStable stable = new RapidashStable();
-    Rapidash blitz = new Rapidash();
-    Bulbasaur bulby = new Bulbasaur();
+  public void getMembers() {
+    Shelter<Rapidash> stable = new Shelter();
+    Rapidash r = new Rapidash(null, null, null);
 
-    stable.add(blitz);
+    stable.add(r);
 
-    Assert.assertThrows(ClassCastException.class, stable.add(bulby));
+    String expected = "r";
+    String actual = stable.toString();
+
+    Assert.assertEquals(expected, actual);
   }
 }

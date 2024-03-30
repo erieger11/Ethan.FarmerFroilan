@@ -2,6 +2,7 @@ package TreyDayTests;
 import AnimalTests.RapidashTest;
 import AnimalTests.SquirtleTest;
 import PersonTest.FarmerTest;
+import Shelter.BulbasaurMeadow;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
