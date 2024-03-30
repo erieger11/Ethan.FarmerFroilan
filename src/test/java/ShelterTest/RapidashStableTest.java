@@ -47,8 +47,8 @@ public class RapidashStableTest<RapidashStable> {
     Rapidash blitz = new Rapidash();
     Bulbasaur bulby = new Bulbasaur();
 
-    stable.add(blitz, bulby);
+    stable.add(blitz);
 
-    Assert.assertThrows(new ClassCastException.class);
+    Assert.assertThrows(ClassCastException.class, stable.add(bulby));
   }
 }

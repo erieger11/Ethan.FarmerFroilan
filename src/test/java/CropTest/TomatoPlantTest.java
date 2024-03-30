@@ -3,7 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TomatoPlantTest {
-     @Test
+
 
      @Test
      public void testInheritance(){
@@ -17,14 +17,6 @@ public class TomatoPlantTest {
 //         int yield = tomatoe.yieldTomatoe();
 //         int expected = 30;
 //         Assert.assertEquals(expected, yield);
-
-
-      }
-
-
-
-
-
 
 
 }

@@ -11,8 +11,8 @@ public class FarmerTest {
 
     @Before
     public void setup(){
-        farmer = new Farmer;
-        cropRow = new Croprow;
+        farmer = new Farmer();
+        cropRow = new Croprow();
     }
     @Test
     public void testInheritance() {
