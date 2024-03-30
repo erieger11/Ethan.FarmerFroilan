@@ -1,26 +1,27 @@
 package Vehicle;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Person.Pilot;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class TractorTest {
-    Tractor tractor = new Tractor;
-
+    Tractor tractor;
+    CropRow cropRow;
+    Pilot pilot;
     @Before
     public void setup(){
         tractor = new Tractor();
+        cropRow = new CropRow();
+        pilot = new Pilot();
     }
 
     @Test
     public void testInheritance(){
-        Assert.assertTrue(tractor instanceof Tractor);
+        Assert.assertTrue(tractor != null);
     }
-    @Test
-    public void harvestTest(){
-        tractor.harvest();
-        Assert.assertTrue(True);
-    }
+
     @Test
     public void makeNoiseTest(){
         tractor.fly();

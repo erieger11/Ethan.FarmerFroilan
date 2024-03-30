@@ -1,8 +1,7 @@
 package PersonTest;
 
-import Animals.Animal;
+
 import com.zipcodewilmington.froilansfarm.Person.Person;
-import com.zipcodewilmington.froilansfarm.Person.Pilot;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,17 +16,18 @@ public class PersonTest {
     }
     @Test
     public void testInheritance() {
-        Assert.assertTrue(person != null);
+        Assert.assertNotNull(person);
     }
 
     @Test
     public void addTest(){
         String expectedPerson = "Dave";
         person.add(person);
-        String actualPerson = getName();
+        String actualPerson = getName(Integer.parseInt("Dave"));
 
         Assert.assertTrue(expectedPerson, Boolean.parseBoolean(actualPerson));
     }
+
     @Test
     public void setNameTest(){;
         String expectedName = "froilanda";
@@ -47,13 +47,10 @@ public class PersonTest {
     }
     @Test
     public void eatTest(){
-        person.add("Frances");
+        person.add(person);
         person.eat();
 
         Assert.assertTrue(person.eat());
     }
-
-
-
 
 }

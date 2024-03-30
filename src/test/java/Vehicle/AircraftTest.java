@@ -1,4 +1,5 @@
 package Vehicle;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 import com.zipcodewilmington.froilansfarm.Vehicle.AirCraft;
 import org.junit.Assert;
@@ -7,13 +8,13 @@ import org.junit.Test;
 public class AircraftTest {
     AirCraft airCraft;
     Pilot pilot;
-  //  CropRow cropRow;
+    CropRow cropRow;
 
     @Before
     public void setup(){
         airCraft = new AirCraft();
         pilot = new Pilot();
-      //  cropRow = new CropRow();
+        cropRow = new CropRow();
     }
 
     @Test
@@ -56,9 +57,9 @@ public class AircraftTest {
     @Test
     public void fertilizeTest(){
         airCraft.addRider(pilot);
-     //   airCraft.fertilize(cropRow);
+        airCraft.fertilize(cropRow);
 
-      //  Assert.assertTrue(cropRow.hasBeenFertalized);
+        Assert.assertTrue(cropRow.hasBeenFertalized);
     }
 }
 

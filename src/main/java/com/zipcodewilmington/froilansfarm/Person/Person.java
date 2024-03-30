@@ -8,4 +8,16 @@ public class Person {
 
     public void add(Person person) {
     }
+
+    public String getName() {
+        return null;
+    }
+
+    public void setName(String froilanda) {
+    }
+
+    public boolean eat() {
+        return false;
+    }
+
 }

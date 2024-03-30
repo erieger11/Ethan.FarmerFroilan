@@ -1,24 +1,20 @@
 package PersonTest;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Person.Pilot;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 public class PilotTest {
-    Rider rider;
     Pilot pilot;
     CropDuster cropDuster;
     CropRow cropRow;
 
     @Before
     public void setup(){
-        rider = new Rider();
         pilot = new Pilot();
         cropDuster = new CropDuster();
         cropRow = new CropRow();
-    }
-
-    @Test
-    public void inheritsRiderTest(){
-        Assert.assertTrue(rider instanceof Rider);
     }
 
     @Test
