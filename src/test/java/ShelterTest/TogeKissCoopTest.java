@@ -1,52 +1,57 @@
 package ShelterTest;
+import com.zipcodewilmington.froilansfarm.Animals.Togekiss;
+import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TogeKissCoopTest {
+
   @Test
   public void coopIsShelter() {
-    TogekissCoop coop = new TogekissCoop();
+    Shelter<Togekiss> coop = new Shelter();
 
     Assert.assertTrue(coop instanceof Shelter);
   }
 
   @Test
   public void addTogekiss() {
-    TogekissCoop coop = new TogekissCoop();
-    Togekiss sora = new Togekiss();
+    Shelter<Togekiss> coop = new Shelter();
+    Togekiss s = new Togekiss(null, null, null);
 
-    coop.add(sora);
+    coop.add(s);
 
-    Integer expected = 1;
-    Integer actual = coop.size();
+    Integer actual = 1;
+    Integer expected = coop.size();
 
     Assert.assertEquals(expected, actual);
   }
+
 
   @Test
   public void removeTogekiss() {
-    TogekissCoop coop = new TogekissCoop();
-    Togekiss sora = new Togekiss();
-    Togekiss aerie = new Togekiss();
+    Shelter<Togekiss> coop = new Shelter();
+    Togekiss s = new Togekiss(null, null, null);
 
-    coop.add(sora, aerie);
-    coop.remove(aerie);
+    coop.add(s);
+    coop.remove(s);
 
-    Integer expected = 1;
-    Integer actual = coop.size();
+    Integer actual = 0;
+    Integer expected = coop.size();
+
 
     Assert.assertEquals(expected, actual);
   }
 
   @Test
-  public void onlyTogekiss() {
-    TogekissCoop coop = new TogekissCoop();
-    Togekiss sora = new Togekiss();
-    Bulbasaur bulby = new Bulbasaur();
+  public void getMembers() {
+    Shelter<Togekiss> coop = new Shelter();
+    Togekiss s = new Togekiss(null, null, null);
 
-    coop.add(sora, bulby);
+    coop.add(s);
 
-    Assert.assertThrows(new ClassCastException.class);
+    String expected = "s";
+    String actual = coop.toString();
+
+    Assert.assertEquals(expected, actual);
   }
 }
-
