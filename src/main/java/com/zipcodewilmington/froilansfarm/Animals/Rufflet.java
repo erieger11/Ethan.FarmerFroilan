@@ -27,4 +27,18 @@ public class Rufflet extends Animal implements Produce_Interface {
     public Double getId(){
         return id;
     }
+    public String makeNoise(){
+        return "rrrrrrruffleee!!!";
+    }
+
+    @Override
+    public Boolean hasBeenFertilized() {
+        return null;
+    }
+
+    @Override
+    public Boolean hasBeenHarvested() {
+        return null;
+    }
+
 }

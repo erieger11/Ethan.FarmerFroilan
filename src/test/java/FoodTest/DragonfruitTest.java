@@ -20,6 +20,7 @@ public class DragonfruitTest
     @Test
     public void testHasBeenHarvested()
     {
+
         Dragonfruit dragonfruit = new Dragonfruit();
         Assert.assertTrue(dragonfruit.hasBeenHarvested());
     }
@@ -28,6 +29,22 @@ public class DragonfruitTest
     {
         Dragonfruit dragonfruit = new Dragonfruit();
         Assert.assertTrue(dragonfruit.hasBeenFertilized());
+
+        //Given
+        Person person = new Person(null);
+        Dragonfruit dragonfruit = new Dragonfruit();
+        Storage storage = new Storage();
+
+        //When
+        storage.put(dragonfruit, 1);
+        person.eat(dragonfruit);
+
+        //Then
+        Integer expected = 0;
+        Integer actual = storage.get(dragonfruit);
+
+        Assert.assertEquals(expected, actual);
+
     }
 //    @Test
 //    public void isInstanceOfTest()

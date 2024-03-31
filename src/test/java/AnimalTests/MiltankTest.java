@@ -1,5 +1,6 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Miltank;
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
 import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
@@ -63,7 +64,7 @@ public class MiltankTest {
     @Test
     public void testInstanceOfProduce() {
         Miltank miltank = new Miltank(null, null, null);
-        Assert.assertTrue(miltank instanceof Produce);
+        Assert.assertTrue(miltank instanceof Produce_Interface);
     }
     @Test
     public void makeNoiseTest() {

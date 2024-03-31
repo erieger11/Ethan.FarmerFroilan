@@ -1,6 +1,7 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
 import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -61,11 +62,6 @@ public class BulbasuarTest {
         Assert.assertTrue(bulbasaur instanceof Animal);
     }
     @Test
-    public void testInstanceOfBotanist() {
-        Bulbasaur bulbasaur = new Bulbasaur(null, null, null);
-        Assert.assertTrue(bulbasaur instanceof Botanist);
-    }
-    @Test
     public void makeNoiseTest() {
         Bulbasaur bulbasaur = new Bulbasaur(null, null, null);
         String expected = "BULBASAUR!!!";
@@ -74,10 +70,11 @@ public class BulbasuarTest {
     }
 
     @Test
-    public void fertilizeCropRowTest() {
+    public void nurtureCropRowTest() {
         Bulbasaur bulbasaur = new Bulbasaur(null, null, null);
-        bulbasaur.fertilize(cropRow);
-        Assert.assertTrue(cropRow.beenFertalized());
+        CropRow cr =  new CropRow();
+        bulbasaur.nurtureCrops(cr);
+        Assert.assertTrue(cr.hasBeenNurtured);
     }
 
 }

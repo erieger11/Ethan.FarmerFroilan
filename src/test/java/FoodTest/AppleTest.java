@@ -20,6 +20,7 @@ public class AppleTest
     @Test
     public void testHasBeenHarvested()
     {
+
         Apple apple = new Apple();
         Assert.assertTrue(apple.hasBeenHarvested());
     }
@@ -28,6 +29,22 @@ public class AppleTest
     {
         Apple apple = new Apple();
         Assert.assertTrue(apple.hasBeenFertilized());
+
+        //Given
+        Person person = new Person(null);
+        Apple apple = new Apple();
+        Storage storage = new Storage();
+
+        //When
+        storage.put(apple, 1);
+        person.eat(apple);
+
+        //Then
+        Integer expected = 0;
+        Integer actual = storage.get(apple);
+
+        Assert.assertEquals(expected, actual);
+
     }
 //    @Test
 //    public void isInstanceOfTest()

@@ -1,12 +1,18 @@
 package FoodTest;
 
 
+
+
+import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Food.Edible;
+
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TomatoTest
 {
+
 @Test
 public void testToString()
 {
@@ -72,6 +78,38 @@ public void testHasBeenFertilized()
 //    {
 //
 //    }
+
+    @Test
+    public void isInstanceOfTest()
+    {
+        Tomato tomato = new Tomato();
+        assertTrue(tomato instanceof Edible);
+    }
+    @Test
+    public void eatTest()
+    {
+        //Given
+        Person person = new Person(null);
+        Tomato tomato = new Tomato();
+        Storage storage = new Storage();
+
+        //When
+        storage.put(tomato, 1);
+        person.eat(tomato);
+
+        //Then
+        Integer expected = 0;
+        Integer actual = storage.get(tomato);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getEaten()
+    {
+
+    }
+
 //    public void testEatenInitialized()
 //    {
 //        Tomato tomato = new Tomato();

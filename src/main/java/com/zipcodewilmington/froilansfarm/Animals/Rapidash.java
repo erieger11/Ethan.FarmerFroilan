@@ -33,6 +33,9 @@ public class Rapidash extends Animal implements Rideable_Interface {
     public Double getId(){
         return id;
     }
+    public String makeNoise(){
+        return "NEIGHHHH!!!";
+    }
 
     public void addRider(Person froilan) {
     }

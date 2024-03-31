@@ -27,4 +27,17 @@ public class Togekiss extends Animal implements Produce_Interface {
     public Double getId(){
         return id;
     }
+    public String makeNoise(){
+        return "toge!!!";
+    }
+
+    @Override
+    public Boolean hasBeenFertilized() {
+        return null;
+    }
+
+    @Override
+    public Boolean hasBeenHarvested() {
+        return null;
+    }
 }

@@ -4,7 +4,6 @@ import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
 import com.zipcodewilmington.froilansfarm.Animals.Charizard;
 import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class BulbasaurMeadowTest {

@@ -1,5 +1,7 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Charizard;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Rideable_Interface;
 import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
@@ -62,7 +64,7 @@ public class CharizardTest {
     @Test
     public void testInstanceOfRideable() {
         Charizard charizard = new Charizard(null, null, null);
-        Assert.assertTrue(charizard instanceof Rideable);
+        Assert.assertTrue(charizard instanceof Rideable_Interface);
     }
     @Test
     public void makeNoiseTest() {
@@ -73,9 +75,9 @@ public class CharizardTest {
     }
     @Test
     public void burnRowTest() {
-        // Given
         Charizard charizard = new Charizard(null, null, null);
-        charizard.burn(cropRow);
-        Assert.assertTrue(cropRow.burned());
+        CropRow cr =  new CropRow();
+        charizard.burnCrops(cr);
+        Assert.assertTrue(cr.hasBeenBurned);
     }
 }

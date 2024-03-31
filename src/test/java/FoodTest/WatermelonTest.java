@@ -1,9 +1,16 @@
 package FoodTest;
 import com.zipcodewilmington.froilansfarm.Crop.Storage;
 
+
 import com.zipcodewilmington.froilansfarm.Food.Watermelon;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Edible;
+
+import com.zipcodewilmington.froilansfarm.Food.Edible;
+import com.zipcodewilmington.froilansfarm.Food.Tomato;
+import com.zipcodewilmington.froilansfarm.Food.Watermelon;
+import com.zipcodewilmington.froilansfarm.Person.Person;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -20,6 +27,7 @@ public class WatermelonTest
     @Test
     public void testHasBeenHarvested()
     {
+
         Watermelon watermelon = new Watermelon();
         Assert.assertTrue(watermelon.hasBeenHarvested());
     }
@@ -28,6 +36,22 @@ public class WatermelonTest
     {
         Watermelon watermelon = new Watermelon();
         Assert.assertTrue(watermelon.hasBeenFertilized());
+
+        //Given
+        Person person = new Person(null);
+        Watermelon watermelon = new Watermelon();
+        Storage storage = new Storage();
+
+        //When
+        storage.put(watermelon, 1);
+        person.eat(watermelon);
+
+        //Then
+        Integer expected = 0;
+        Integer actual = storage.get(watermelon);
+
+        Assert.assertEquals(expected, actual);
+
     }
 //    @Test
 //    public void isInstanceOfTest()
