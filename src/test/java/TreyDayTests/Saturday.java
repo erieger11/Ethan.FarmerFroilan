@@ -3,7 +3,13 @@ import AnimalTests.RapidashTest;
 import AnimalTests.SquirtleTest;
 import PersonTest.FarmerTest;
 import Shelter.BulbasaurMeadow;
+import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
+import com.zipcodewilmington.froilansfarm.Animals.Squirtle;
+import com.zipcodewilmington.froilansfarm.Animals.Togekiss;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
+import com.zipcodewilmington.froilansfarm.Person.Farmer;
+import com.zipcodewilmington.froilansfarm.Person.Pilot;
 import org.junit.Assert;
 import org.junit.Test;
 // Froilan & Froilanda wake up and eat 2 Togekiss eggs and 1 watermelon. They then go out to catch Pokemon.
@@ -43,7 +49,7 @@ public class Saturday {
 
   @Test
   public void froilanCatchesSquirtle() {
-    Squirtle wildSquirtle = new Squirtle();
+    Squirtle wildSquirtle = new Squirtle("Squirtle","Water",0.0007);
     SquirtlePond pond = new SquirtlePond();
 
     pond.add(wildSquirtle);
@@ -53,8 +59,8 @@ public class Saturday {
 
   @Test
   public void froilandaCatchesTogekissAndBulbasaur() {
-    Togekiss wildTogekiss = new Togekiss();
-    Bulbasaur wildBulbasaur = new Bulbasaur();
+    Togekiss wildTogekiss = new Togekiss("TogeKiss","Fairy",0.0468);
+    Bulbasaur wildBulbasaur = new Bulbasaur("Bulbasaur","Grass",0.0001);
 
     TogekissCoop coop = new TogekissCoop();
     BulbasaurMeadow meadow = new BulbasaurMeadow();

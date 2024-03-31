@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+
 public class Bulbasaur extends Animal {
     String type;
     Double id;
@@ -25,6 +27,13 @@ public class Bulbasaur extends Animal {
     }
     public Double getId(){
         return id;
+    }
+    public String makeNoise() {
+        return "BULBASAUR!!!";
+    }
+
+    public void nurtureCrops(CropRow croprow) {
+        croprow.hasBeenNurtured = true;
     }
 
 }

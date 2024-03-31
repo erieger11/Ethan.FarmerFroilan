@@ -1,4 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Animals;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Rideable_Interface;
 
 public class Charizard extends Animal implements Rideable_Interface {
@@ -28,5 +29,11 @@ public class Charizard extends Animal implements Rideable_Interface {
         return id;
     }
 
+    public String makeNoise() {
+        return "RAWRRRRR!!!";
+    }
 
+    public void burnCrops(CropRow croprow) {
+        croprow.hasBeenBurned = true;
+    }
 }
