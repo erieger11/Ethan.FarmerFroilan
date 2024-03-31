@@ -1,4 +1,7 @@
 package FoodTest;
+import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Food.Edible;
+import com.zipcodewilmington.froilansfarm.Person.Person;
 import org.junit.Assert;
 import org.junit.Test;
 

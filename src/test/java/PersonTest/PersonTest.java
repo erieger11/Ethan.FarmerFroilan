@@ -1,6 +1,7 @@
 package PersonTest;
 
 import Animals.Animal;
+import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 import org.junit.Assert;
 import org.junit.Before;
