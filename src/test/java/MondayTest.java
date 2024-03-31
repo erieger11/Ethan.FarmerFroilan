@@ -7,6 +7,11 @@ public class MondayTest
     public void testCropDusterRemoveFromList(){
         setup();
     }
+
+    private void setup()
+    {
+    }
+
     @Test
     public void testCropDusterFly()
     {
