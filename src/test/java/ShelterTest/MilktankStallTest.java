@@ -1,4 +1,7 @@
 package ShelterTest;
+import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Animals.Miltank;
+import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -6,17 +9,17 @@ public class MilktankStallTest {
 
   @Test
   public void stallIsShelter() {
-    MilktankStall stall = new MilktankStall();
+    Shelter<Miltank> stall = new Shelter();
 
     Assert.assertTrue(stall instanceof Shelter);
   }
 
   @Test
   public void addMilktank() {
-    MilktankStall stall = new MilktankStall();
-    Milktank bessie = new Milktank();
+    Shelter<Miltank> stall = new Shelter();
+    Miltank b = new Miltank(null, null, null);
 
-    stall.add(bessie);
+    stall.add(b);
 
     Integer expected = 1;
     Integer actual = stall.size();
@@ -26,11 +29,12 @@ public class MilktankStallTest {
 
   @Test
   public void removeMilktank() {
-    MilktankStall stall = new MilktankStall();
-    Milktank bessie = new Milktank();
-    Milktank cooper = new Milktank();
+    Shelter<Miltank> stall = new Shelter();
+    Miltank bessie = new Miltank(null, null, null);
+    Miltank cooper = new Miltank(null, null, null);
 
-    stall.add(bessie, cooper);
+    stall.add(bessie);
+    stall.add(cooper);
     stall.remove(cooper);
 
     Integer expected = 1;
@@ -40,13 +44,12 @@ public class MilktankStallTest {
   }
 
   @Test
-  public void onlyMilktank() {
-    MilktankStall stall = new MilktankStall();
-    Milktank bessie = new Milktank();
-    Squirtle bubbles = new Squirtle();
+  public void getMembers() {
+    Shelter<Miltank> stall = new Shelter();
+    Miltank bessie = new Miltank(null, null, null); // not sure if it's gonna print out with these values!
 
-    stall.add(bessie, bubbles);
-
-    Assert.assertThrows(new ClassCastException.class);
+    String expected = "bessie";
+    String actual = stall.toString();
   }
 }
+

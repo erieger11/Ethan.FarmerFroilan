@@ -1,4 +1,5 @@
 package CropTest;
+import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,8 +8,8 @@ public class TomatoPlantTest {
 
      @Test
      public void testInheritance(){
-         Tomatoe tomatoe  = new Tomatoe();
-         Assert.assertTrue(tomatoe instanceof Crop);
+         Tomato tomato  = new Tomato();
+         Assert.assertTrue(tomato instanceof Crop);
      }
       @Test
 

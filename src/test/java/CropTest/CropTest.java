@@ -1,6 +1,7 @@
 package CropTest;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,9 +12,6 @@ public class CropTest {
         Crop crop = new Crop();
         Assert.assertTrue(crop instanceof Crop);
     }
-
-
-
     @Test
     public void testImplementation() {
         Crop crop= new Crop();
@@ -22,7 +20,7 @@ public class CropTest {
         @Test
      public void testHasBeenFertilized(){
             CropDuster cropDuster = new CropDuster();
-            CropRow cr = new CropRow(tomatoe, tomatoe, tomatoe);
+            CropRow cr = new CropRow(tomato, tomato, tomato);
             boolean result = cropDuster.hasBeenFertilized();
             Assert.assertTrue(hasBeenFertilized());
         }
@@ -30,9 +28,9 @@ public class CropTest {
         @Test
      public void testHasBeenHarvested(){
             Tractor tractor = new Tractor();
-            CropRow cr = new CropRow(tomatoe, tomatoe, tomatoe);
+            CropRow cr = new CropRow(tomato, tomato, tomato);
             boolean result = tractor.hasBeenHarvested();
-            Assert.assertTrue( hasBeenHarvested());
+            Assert.assertTrue(hasBeenHarvested());
     }
 
         @Test
@@ -48,7 +46,7 @@ public class CropTest {
         if(cr.hasBeenFertilized = true && cr.hasBeenHarvested = false){
            Assert.assertEquals();
         }
-        }
+    }
 
 
     @Test

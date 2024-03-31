@@ -1,53 +1,56 @@
 package ShelterTest;
+import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Animals.Squirtle;
+import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SquirtlePondTest {
+  public class SquirtlePondTest {
 
-  @Test
-  public void pondIsShelter() {
-    SquirtlePond pond = new SquirtlePond();
+    @Test
+    public void pondIsShelter() {
+      Shelter<Squirtle> pond = new Shelter();
 
-    Assert.assertTrue(pond instanceof Shelter);
+      Assert.assertTrue(pond instanceof Shelter);
+    }
+
+    @Test
+    public void addBulbasaur() {
+      Shelter<Squirtle> pond = new Shelter();
+      Squirtle s = new Squirtle(null, null, null);
+
+      pond.add(s);
+
+      Integer actual = 1;
+      Integer expected = pond.size();
+
+      Assert.assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void removeBulbasaur() {
+      Shelter<Squirtle> pond = new Shelter();
+      Squirtle s = new Squirtle(null, null, null);
+
+      pond.add(s);
+      pond.remove(s);
+
+      Integer expected = 0;
+      Integer actual = pond.size();
+
+      Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getMembers() {
+      Shelter<Squirtle> pond = new Shelter();
+      Squirtle s = new Squirtle(null, null, null);
+
+      pond.add(s);
+      String expected = "s";
+      String actual = pond.toString();
+
+      Assert.assertEquals(expected, actual);
+    }
   }
-
-  @Test
-  public void addSquirtle() {
-    SquirtlePond pond = new SquirtlePond();
-    Squirtle bubbles = new Squirtle();
-
-    pond.add(bubbles);
-
-    Integer expected = 1;
-    Integer actual = pond.size();
-
-    Assert.assertEquals(expected, actual);
-  }
-
-  @Test
-  public void removeSquirtle() {
-    SquirtlePond pond = new SquirtlePond();
-    Squirtle bubbles = new Squirtle();
-    Squirtle nico = new Squirtle();
-
-    pond.add(bubbles, nico);
-
-    pond.remove(nico);
-
-    Integer expected = 1;
-    Integer actual = pond.size();
-
-    Assert.assertEquals(expected, actual);
-  }
-
-  @Test
-  public void onlySquirtle() {
-    Squirtle pond = new SquirtlePond();
-    Squirtle bubbles = new Squirtle();
-    Milktank bessie = new Milktank();
-
-    pond.add(bubbles, bessie);
-
-    Assert.assertThrows(new ClassCastException.class);
-  }
-}
