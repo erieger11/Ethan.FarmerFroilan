@@ -16,7 +16,7 @@ public class EdibleTest
         //When
         Storage.put(tomato,3);
         froilan.eat(tomato,3);
-        Storage.put(tomato,);
+        Storage.put(tomato,1);
         Integer expected = 0;
         Integer actual = storage.get(tomato);
 
