@@ -2,11 +2,11 @@ package com.zipcodewilmington.froilansfarm.Food;
 
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Edible;
 
-public class Tomato implements Edible
+public class MilktankMilkGallon implements Edible
 {
     public Boolean harvested;
     public Boolean fertilized;
-    public Tomato(){
+    public MilktankMilkGallon(){
         this.fertilized = false;
         this.harvested = false;
     }
@@ -15,10 +15,10 @@ public class Tomato implements Edible
     {
         return harvested = true;
     }
-
     @Override
     public Boolean hasBeenFertilized()
     {
         return fertilized = true;
     }
 }
+
