@@ -1,10 +1,13 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 
 
 
 public class CropDuster {
+    public boolean hasPilot;
+
     public void addRider(Pilot pilot) {
     }
 
@@ -32,5 +35,11 @@ public class CropDuster {
 
     public boolean beenFertalized() {
         return false;
+    }
+
+    public void fertilize(CropRow cropRow) {
+    }
+
+    public void removeRider() {
     }
 }

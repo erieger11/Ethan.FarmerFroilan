@@ -11,13 +11,13 @@ public class TomatoPlantTest {
          Tomato tomato  = new Tomato();
          Assert.assertTrue(tomato instanceof Crop);
      }
-//      @Test
-//
-//    public void TestYieldTomatoe() {
-//         Tomatoe tomatoe  = new Tomatoe();
-//         int yield = tomatoe.yieldTomatoe();
-//         int expected = 30;
-//         Assert.assertEquals(expected, yield);
+      @Test
+
+    public void TestYieldTomatoe() {
+         Tomatoe tomatoe  = new Tomatoe();
+         int yield = tomatoe.yieldTomatoe();
+         int expected = 30;
+         Assert.assertEquals(expected, yield);
 
 
 }
