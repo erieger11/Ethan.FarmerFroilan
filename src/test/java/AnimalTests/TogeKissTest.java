@@ -1,5 +1,6 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Togekiss;
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
 import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
@@ -63,7 +64,7 @@ public class TogeKissTest {
     @Test
     public void testInstanceOfProduce() {
         Togekiss togekiss = new Togekiss(null, null, null);
-        Assert.assertTrue(togekiss instanceof Produce);
+        Assert.assertTrue(togekiss instanceof Produce_Interface);
     }
     @Test
     public void makeNoiseTest() {

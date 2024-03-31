@@ -9,4 +9,8 @@ public class Animal implements Eater_Interface, NoiseMaker_Interface {
     }
 
 
+    @Override
+    public String makeNoise() {
+        return null;
+    }
 }

@@ -1,5 +1,6 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Rufflet;
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
 import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
@@ -63,7 +64,7 @@ public class RuffletTest {
     @Test
     public void testInstanceOfProduce() {
         Rufflet rufflet = new Rufflet(null, null, null);
-        Assert.assertTrue(rufflet instanceof Produce);
+        Assert.assertTrue(rufflet instanceof Produce_Interface);
     }
     @Test
     public void makeNoiseTest() {

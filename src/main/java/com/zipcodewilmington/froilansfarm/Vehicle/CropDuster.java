@@ -3,7 +3,6 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 
 
-
 public class CropDuster {
     public void addRider(Pilot pilot) {
     }

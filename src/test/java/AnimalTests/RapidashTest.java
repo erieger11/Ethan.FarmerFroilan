@@ -1,5 +1,6 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Rideable_Interface;
 import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
@@ -69,6 +70,6 @@ public class RapidashTest {
     @Test
     public void testInstanceOfRideable() {
         Rapidash rapidash = new Rapidash(null, null, null);
-        Assert.assertTrue(rapidash instanceof Rideable);
+        Assert.assertTrue(rapidash instanceof Rideable_Interface);
     }
 }
