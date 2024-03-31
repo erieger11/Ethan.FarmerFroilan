@@ -1,8 +1,12 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Botanist_Interface;
+
 public class Squirtle extends Animal {
     String type;
     Double id;
+
     public Squirtle(String name,String type, Double id) {
         super(name);
         this.type = type;
@@ -26,6 +30,11 @@ public class Squirtle extends Animal {
     public Double getId(){
         return id;
     }
-
+    public String makeNoise(){
+        return "SQUIRTLEEEEE!!!";
+    }
+    public void waterCrops (CropRow croprow) {
+        croprow.hasBeenWatered = true;
+    }
 
 }

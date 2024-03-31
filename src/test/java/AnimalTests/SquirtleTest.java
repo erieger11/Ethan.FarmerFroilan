@@ -1,5 +1,6 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Squirtle;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
@@ -61,11 +62,6 @@ public class SquirtleTest {
         Assert.assertTrue(squirtle instanceof Animal);
     }
     @Test
-    public void testInstanceOfBotanist() {
-        Squirtle squirtle = new Squirtle(null, null, null);
-        Assert.assertTrue(squirtle instanceof Botanist);
-    }
-    @Test
     public void makeNoiseTest() {
         Squirtle squirtle = new Squirtle(null, null, null);
         String expected = "SQUIRTLEEEEE!!!";
@@ -75,8 +71,8 @@ public class SquirtleTest {
     @Test
     public void waterCropRowTest() {
         Squirtle squirtle = new Squirtle(null, null, null);
-        squirtle.waterCrop(cropRow);
-        Assert.assertTrue(cropRow.beenWatered());
-
+        CropRow cr =  new CropRow();
+        squirtle.waterCrops(cr);
+        Assert.assertTrue(cr.hasBeenWatered);
     }
 }

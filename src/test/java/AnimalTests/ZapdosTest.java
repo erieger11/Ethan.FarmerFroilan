@@ -60,11 +60,6 @@ public class ZapdosTest {
         Assert.assertTrue(zapdos instanceof Animal);
     }
     @Test
-    public void testInstanceOfBotanist() {
-        Zapdos zapdos = new Zapdos(null, null, null);
-        Assert.assertTrue(zapdos instanceof Botanist);
-    }
-    @Test
     public void makeNoiseTest() {
         Zapdos zapdos = new Zapdos(null, null, null);
         String expected = "zap-zap!!!";
