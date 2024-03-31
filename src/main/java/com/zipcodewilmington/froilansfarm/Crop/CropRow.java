@@ -4,8 +4,10 @@ public class CropRow {
     public boolean hasBeenFertalized;
 
     public Boolean beenHarvested() {
+        return null;
     }
 
     public boolean beenFertalized() {
+        return false;
     }
 }

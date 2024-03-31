@@ -3,7 +3,7 @@ package TreyDayTests;
 import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Food.EarCorn;
-import com.zipcodewilmington.froilansfarm.Food.Storage;
+import com.zipcodewilmington.froilansfarm.Crop.Storage;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;

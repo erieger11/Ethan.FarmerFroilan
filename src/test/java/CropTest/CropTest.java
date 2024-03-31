@@ -1,4 +1,6 @@
 package CropTest;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import org.junit.Assert;
 import org.junit.Test;
 

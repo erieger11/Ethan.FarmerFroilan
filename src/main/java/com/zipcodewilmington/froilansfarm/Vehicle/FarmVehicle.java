@@ -9,12 +9,14 @@ public class FarmVehicle {
     }
 
     public String makeNoise() {
+        return null;
     }
 
     public void addRider(Pilot pilot) {
     }
 
     public boolean hasRidder() {
+        return false;
     }
 
     public void removeRider() {
