@@ -26,8 +26,8 @@ public class TuesdayTest {
         cropRow = new CropRow();
         earCorn = new EarCorn();
         storage = new Storage();
-       rapidash = new Rapidash();
-        froilan = new Person();
+       rapidash = new Rapidash(null,null,null);
+        froilan = new Person(null);
         tomato = new Tomato();
        // ruffletEgg = new RuffletEgg();
     }

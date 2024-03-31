@@ -20,17 +20,17 @@ public class AppleTest
     public void eatTest()
     {
         //Given
-        Person person = new Person();
+        Person person = new Person(null);
         Apple apple = new Apple();
         Storage storage = new Storage();
 
         //When
-        storage.add(apple, 1);
+        storage.put(apple, 1);
         person.eat(apple);
 
         //Then
         Integer expected = 0;
-        Integer actual = storage.getValue;
+        Integer actual = storage.get(apple);
 
         Assert.assertEquals(expected, actual);
     }

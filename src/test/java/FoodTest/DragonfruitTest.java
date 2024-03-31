@@ -20,17 +20,17 @@ public class DragonfruitTest
     public void eatTest()
     {
         //Given
-        Person person = new Person();
+        Person person = new Person(null);
         Dragonfruit dragonfruit = new Dragonfruit();
         Storage storage = new Storage();
 
         //When
-        storage.add(dragonfruit, 1);
+        storage.put(dragonfruit, 1);
         person.eat(dragonfruit);
 
         //Then
         Integer expected = 0;
-        Integer actual = storage.getValue;
+        Integer actual = storage.get(dragonfruit);
 
         Assert.assertEquals(expected, actual);
     }

@@ -14,9 +14,9 @@ public class EdibleTest
         Farmer froilan = new Farmer();
 
         //When
-        Storage.put(tomato,3);
+        storage.put(tomato,3);
         froilan.eat(tomato,3);
-        Storage.put(tomato,1);
+        storage.put(tomato,1);
         Integer expected = 0;
         Integer actual = storage.get(tomato);
 

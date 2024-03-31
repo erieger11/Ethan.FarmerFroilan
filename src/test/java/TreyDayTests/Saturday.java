@@ -1,8 +1,5 @@
 package TreyDayTests;
 import AnimalTests.RapidashTest;
-import AnimalTests.SquirtleTest;
-import PersonTest.FarmerTest;
-import Shelter.BulbasaurMeadow;
 import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
 import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
 import com.zipcodewilmington.froilansfarm.Animals.Squirtle;
@@ -83,7 +80,7 @@ public class Saturday {
 
   @Test
   public void froilanFeedsRapidash() {
-    Rapidash rapidash = new RapidashTest();
+    Rapidash rapidash = new Rapidash();
 
     rapidash.eat(Tomato, -1);
 

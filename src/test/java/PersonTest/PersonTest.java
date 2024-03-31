@@ -4,7 +4,6 @@ package PersonTest;
 
 import com.zipcodewilmington.froilansfarm.Person.Person;
 
-import Animals.Animal;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 
@@ -18,7 +17,7 @@ public class PersonTest {
     Person person;
     @Before
     public void setup(){
-        person = new Person();
+        person = new Person("");
     }
     @Test
     public void testInheritance() {
