@@ -33,11 +33,11 @@ public class Togekiss extends Animal implements Produce_Interface {
 
     @Override
     public Boolean hasBeenFertilized() {
-        return null;
+        return Rufflet.hasBeenFertilized = true;
     }
 
     @Override
     public Boolean hasBeenHarvested() {
-        return null;
+        return Rufflet.hasBeenHarvested = true;
     }
 }

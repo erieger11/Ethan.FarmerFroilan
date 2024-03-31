@@ -4,6 +4,8 @@ import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
 public class Rufflet extends Animal implements Produce_Interface {
     String type;
     Double id;
+    public static boolean hasBeenFertilized = false;
+    public static boolean hasBeenHarvested = false;
     public Rufflet(String name,String type, Double id) {
         super(name);
         this.type = type;
@@ -33,12 +35,14 @@ public class Rufflet extends Animal implements Produce_Interface {
 
     @Override
     public Boolean hasBeenFertilized() {
-        return null;
+        return Rufflet.hasBeenFertilized = true;
     }
 
     @Override
     public Boolean hasBeenHarvested() {
-        return null;
+        return Rufflet.hasBeenHarvested = true;
     }
+    //creating the rufflet egg
+
 
 }

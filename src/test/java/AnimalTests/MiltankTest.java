@@ -5,6 +5,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
 
+import static com.zipcodewilmington.froilansfarm.Animals.Rufflet.hasBeenFertilized;
+import static com.zipcodewilmington.froilansfarm.Animals.Rufflet.hasBeenHarvested;
+
 
 public class MiltankTest {
     @Test
@@ -75,8 +78,8 @@ public class MiltankTest {
     }
     @Test
     public void milkGallonTest(){
-        if(hasBeenFertilized){
-            MilkGallon milkGallon = new MilkGallon();
+            if(hasBeenFertilized && hasBeenHarvested){
+                MilkGallon milkGallon = new MilkGallon();
         }
     }
 }
