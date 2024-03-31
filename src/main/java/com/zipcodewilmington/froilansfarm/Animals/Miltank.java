@@ -30,4 +30,14 @@ public class Miltank extends Animal implements Produce_Interface {
     public String makeNoise(){
         return "mooooooooooo!!!";
     }
+
+    @Override
+    public Boolean hasBeenFertilized() {
+        return Rufflet.hasBeenFertilized = true;
+    }
+
+    @Override
+    public Boolean hasBeenHarvested() {
+        return Rufflet.hasBeenHarvested = true;
+    }
 }

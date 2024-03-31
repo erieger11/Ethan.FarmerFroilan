@@ -5,6 +5,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
 
+import static com.zipcodewilmington.froilansfarm.Animals.Rufflet.hasBeenFertilized;
+import static com.zipcodewilmington.froilansfarm.Animals.Rufflet.hasBeenHarvested;
+
 
 public class RuffletTest {
     @Test
@@ -76,7 +79,7 @@ public class RuffletTest {
 
     @Test
     public void ruffletEggTest() {
-        if(hasBeenFertilized){
+        if(hasBeenFertilized && hasBeenHarvested){
             RuffletEgg ruffletEgg = new RuffletEgg();
              }
         }

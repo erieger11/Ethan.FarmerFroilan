@@ -5,6 +5,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
 
+import static com.zipcodewilmington.froilansfarm.Animals.Rufflet.hasBeenFertilized;
+import static com.zipcodewilmington.froilansfarm.Animals.Rufflet.hasBeenHarvested;
+
 
 public class TogeKissTest {
     @Test
@@ -74,9 +77,9 @@ public class TogeKissTest {
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void togepiEggTest() {
-        if(hasBeenFertilized) {
-            TogekissEgg togepi = new TogekissEgg();
+    public void ruffletEggTest() {
+        if(hasBeenFertilized && hasBeenHarvested){
+           iwnvonwvi
         }
     }
 }
