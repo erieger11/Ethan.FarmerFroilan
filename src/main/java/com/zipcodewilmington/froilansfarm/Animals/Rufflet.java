@@ -40,4 +40,5 @@ public class Rufflet extends Animal implements Produce_Interface {
     public Boolean hasBeenHarvested() {
         return null;
     }
+
 }

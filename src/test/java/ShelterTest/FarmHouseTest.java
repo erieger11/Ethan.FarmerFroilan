@@ -18,7 +18,7 @@ public class FarmHouseTest {
   @Test
     public void addPerson() {
       Shelter<Person> farmHouse = new Shelter();
-      Person p = new Person();
+      Person p = new Person(null);
 
       farmHouse.add(p);
 
@@ -32,7 +32,7 @@ public class FarmHouseTest {
     @Test
     public void removePerson() {
       Shelter<Person> farmHouse = new Shelter();
-      Person p = new Person();
+      Person p = new Person(null);
 
       farmHouse.add(p);
       farmHouse.remove(p);
@@ -45,7 +45,7 @@ public class FarmHouseTest {
     @Test
     public void getMembers() {
       Shelter<Person> farmHouse = new Shelter();
-      Person p = new Person();
+      Person p = new Person(null);
 
       farmHouse.add(p);
 

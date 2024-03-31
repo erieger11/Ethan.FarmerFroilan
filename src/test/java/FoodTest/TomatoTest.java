@@ -1,13 +1,12 @@
 package FoodTest;
-package com.zipcodewilmington.froilansfarm.crops.edibles;
 
 import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Food.Edible;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 //import com.zipcodewilmington.froilansfarm.crops.edibles.Tomato;
 //import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import org.junit.Assert;
-import jdk.jfr.snippets.Snippets;
 import org.junit.Test;
 
 
@@ -25,17 +24,17 @@ public class TomatoTest
     public void eatTest()
     {
         //Given
-        Person person = new Person();
+        Person person = new Person(null);
         Tomato tomato = new Tomato();
         Storage storage = new Storage();
 
         //When
-        storage.add(tomato, 1);
+        storage.put(tomato, 1);
         person.eat(tomato);
 
         //Then
         Integer expected = 0;
-        Integer actual = storage.getValue();
+        Integer actual = storage.get(tomato);
 
         Assert.assertEquals(expected, actual);
     }

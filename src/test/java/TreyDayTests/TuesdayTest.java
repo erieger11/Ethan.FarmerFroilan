@@ -3,6 +3,7 @@ package TreyDayTests;
 import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Food.EarCorn;
+import com.zipcodewilmington.froilansfarm.Crop.Storage;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
@@ -24,9 +25,9 @@ public class TuesdayTest {
         tractor = new Tractor();
         cropRow = new CropRow();
         earCorn = new EarCorn();
-      //  storage = new Storage();
-       // rapidash = new Rapidash();
-        froilan = new Person();
+        storage = new Storage();
+       rapidash = new Rapidash(null,null,null);
+        froilan = new Person(null);
         tomato = new Tomato();
        // ruffletEgg = new RuffletEgg();
     }
@@ -37,7 +38,7 @@ public void firstRowPlanted() {
 
     tractor.harvest(cropRow);
 
-    //Assert.assertTrue(cropRow.hasBeenHarvested);
+    Assert.assertTrue(cropRow.hasBeenHarvested);
 }
 
 //    Riding each Horse in each Stable.
@@ -55,20 +56,20 @@ public void froilanFeedsRapidash() {
         rapidash.eat(earCorn, -1);
 
     Integer expected = -1;
-   // Integer actual = storage.get(earCorn);
+   Integer actual = storage.get(earCorn);
 
-    //Assert.assertEquals(expected, actual);
+    Assert.assertEquals(expected, actual);
 }
 //    BREAKFAST: Froilan eats 1 EarCorn, 2 Tomato, and 5 Egg
     @Test
     public void froilanBreakfastEarCornTest() {
 
-      //  froilan.eat(earCorn, -1);
+        froilan.eat(earCorn, -1);
 
         Integer expected = -1; // this is just a placeholder.
-        //Integer actual = storage.get(earCorn); // this will return a value for Togekiss eggs
+        Integer actual = storage.get(earCorn); // this will return a value for Togekiss eggs
 
-       // Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -76,18 +77,18 @@ public void froilanFeedsRapidash() {
         froilan.eat(tomato, -2);
 
         Integer expected = -2; // this is just a placeholder.
-       // Integer actual = storage.get(tomato); // this will return a value for Togekiss eggs
+        Integer actual = storage.get(tomato); // this will return a value for Togekiss eggs
 
-        //Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void froilanBreakfastEggTest() {
 
-        //froilan.eat(ruffletEgg, -5);
+        froilan.eat(ruffletEgg, -5);
 
         Integer expected = -5; // this is just a placeholder.
-        //Integer actual = storage.get(ruffletEgg); // this will return a value for Togekiss eggs
+        Integer actual = storage.get(ruffletEgg); // this will return a value for Togekiss eggs
 
-        //Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 }

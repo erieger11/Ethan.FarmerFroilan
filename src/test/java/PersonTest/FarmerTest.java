@@ -1,4 +1,5 @@
 package PersonTest;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Person.Farmer;
 import org.junit.Assert;
 
@@ -12,7 +13,7 @@ public class FarmerTest {
     @Before
     public void setup(){
         farmer = new Farmer();
-        cropRow = new Croprow();
+        cropRow = new CropRow();
     }
     @Test
     public void testInheritance() {
