@@ -11,9 +11,10 @@ public class Edible
     boolean hasBeenEaten = false;
 
     //generic method
-//    public void eat(Edible food, Integer amount){
-//        stock = storage.get(food);
-//        storage.put(food,stock - amount);
-//        hasBeenEaten = true;
-//    }
+    public void eat(Edible food, Integer amount){
+        stock = storage.get(food);
+        storage.put(food,stock - amount);
+        hasBeenEaten = true;
+    }
 }
+//SM

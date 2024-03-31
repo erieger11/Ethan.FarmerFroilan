@@ -1,5 +1,13 @@
 package CropTest;
+
 import org.junit.Assert;
+
+import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Food.Apple;
+import com.zipcodewilmington.froilansfarm.Food.Edible;
+import org.junit.Assert;
+import org.junit.Before;
+
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -7,6 +15,7 @@ import java.util.HashMap;
 public class StorageTest
 {
 //    Storage storage = new Storage();
+
     HashMap<Object, Integer> storage = new HashMap<>();
     storage.put(apple, 5);
     storage.put(dragonfruit, 5);
@@ -16,6 +25,22 @@ public class StorageTest
     storage.put(togepi, 5);
     storage.put(watermelon, 5);
     storage.put(tomato, 5);
+
+    //HashMap<Object, Integer> storage = new HashMap<>();
+    @Before
+    public void Setup() {
+        Storage st = new Storage();
+        st.add(Apple, 3);
+
+        storage. (apple, 5);
+        storage.put(dragonfruit, 5);
+        storage.put(earCorn, 5);
+        storage.put(milkGallon, 5);
+        storage.put(ruffletEgg, 5);
+        storage.put(togepi, 5);
+        storage.put(watermelon, 5);
+        storage.put(tomato, 5);
+    }
 
     @Test
     public void testStoreAndRetrieve() {

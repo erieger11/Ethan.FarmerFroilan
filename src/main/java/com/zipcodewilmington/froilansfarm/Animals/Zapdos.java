@@ -27,4 +27,8 @@ public class Zapdos extends Animal implements Produce_Interface {
     public Double getId(){
         return id;
     }
+    public String makeNoise(){
+        return "zap-zap!!!";
+    }
+
 }

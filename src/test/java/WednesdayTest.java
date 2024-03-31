@@ -11,14 +11,14 @@ public class WednesdayTest
 
     {
         //setup();
-        Boolean actual = cropDuster.fly(field);
+        Boolean actual = CropDuster.fly(field);
         Assert.assertTrue(actual);
     }
         @Test
         public void testCropDusterFertilize();
     {
         //setup();
-        Boolean actual = cropDuster.fertilize(cropRow1);
+        Boolean actual = CropDuster.fertilize(cropRow1);
         Assert.assertTrue(actual);
     }
         tractor.harvest(cropRow1);

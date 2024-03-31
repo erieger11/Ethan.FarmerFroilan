@@ -1,7 +1,10 @@
 package com.zipcodewilmington.froilansfarm.TheInterfaces;
 
-import com.zipcodewilmington.froilansfarm.Food.EarCorn;
+import com.zipcodewilmington.froilansfarm.Food.Edible;
 
 public interface Eater_Interface {
-    void eat(EarCorn earCorn, int i);
+
+    public static Integer eat(Edible<T> food, Integer valueToChange) {
+        return food.get() - valueToChange;
+    }
 }

@@ -10,4 +10,8 @@ public class CropRow {
     public boolean beenFertalized() {
         return false;
     }
+
+    public boolean hasBeenNurtured;
+    public boolean hasBeenBurned;
+
 }

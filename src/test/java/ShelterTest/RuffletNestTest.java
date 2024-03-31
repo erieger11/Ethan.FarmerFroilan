@@ -1,52 +1,58 @@
 package ShelterTest;
+
+import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Animals.Rufflet;
+import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class RuffletNestTest {
 
   @Test
-  public void nestIsShelter() {
-    RuffletNest nest = new RuffletNest();
+  public void meadowIsShelter() {
+    Shelter<Rufflet> nest = new Shelter();
 
     Assert.assertTrue(nest instanceof Shelter);
   }
 
   @Test
-  public void addRufflet() {
-    RuffletNest nest = new RuffletNest();
-    Rufflet birdo = new Rufflet();
+  public void addBulbasaur() {
+    Shelter<Rufflet> nest = new Shelter();;
+    Rufflet r = new Rufflet(null, null, null);
 
-    nest.add(birdo);
+    nest.add(r);
 
-    Integer expected = 1;
+    Integer actual = 1;
+    Integer expected = nest.size();
+
+    Assert.assertEquals(expected, actual);
+  }
+
+
+  @Test
+  public void removeBulbasaur() {
+    Shelter<Rufflet> nest = new Shelter();;
+    Rufflet r = new Rufflet(null, null, null);
+
+    nest.add(r);
+    nest.remove(r);
+
+    Integer expected = 0;
     Integer actual = nest.size();
 
     Assert.assertEquals(expected, actual);
   }
 
   @Test
-  public void removeTogekiss() {
-    RuffletNest nest = new RuffletNest();
-    Rufflet birdo = new Rufflet();
-    Togekiss aerie = new Togekiss();
+  public void getMembers() {
+    Shelter<Rufflet> nest = new Shelter();;
+    Rufflet r = new Rufflet(null, null, null);
 
-    nest.add(birdo, aerie);
-    nest.remove(aerie);
+    nest.add(r);
 
-    Integer expected = 1;
-    Integer actual = nest.size();
+    String expected = "r";
+    String actual = nest.toString();
 
     Assert.assertEquals(expected, actual);
-  }
-
-  @Test
-  public void onlyTogekiss() {
-    RuffletNest nest = new RuffletNest();
-    Rufflet birdo = new Rufflet();
-    Bulbasaur bulby = new Bulbasaur();
-
-    nest.add(birdo, bulby);
-
-    Assert.assertThrows(new ClassCastException. class);
   }
 }
