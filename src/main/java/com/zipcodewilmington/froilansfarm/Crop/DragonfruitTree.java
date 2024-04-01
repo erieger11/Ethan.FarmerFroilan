@@ -1,12 +1,15 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
 
-import com.zipcodewilmington.froilansfarm.TheInterfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Food.Dragonfruit;
+
 
 public class DragonfruitTree extends Crop {
-    @Override
-    public Edible yield() {
-        return null;
+
+    public void yield(CropRow cropRow, Storage storage) {
+        if (hasBeenWatered() && hasBeenFertilized() && hasBeenFertilized()) {
+            storage.add(new Dragonfruit(), cropRow.size());
+        }
     }
 }
 

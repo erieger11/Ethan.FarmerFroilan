@@ -9,7 +9,6 @@ public abstract class Crop implements Produce_Interface {
     boolean isHarvested;
     boolean isWatered;
 
-    public abstract Edible yield();
 
     public Boolean hasBeenFertilized(){
         return isFertilized;

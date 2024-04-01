@@ -20,9 +20,14 @@ public class Tractor implements Vehicle_Interface {
 
     }
 
-    public boolean removeRider() {
-        return false;
+    @Override
+    public void removeRider() {
+
     }
+
+//    public boolean removeRider() {
+//        return false;
+//    }
 
     public void fertilize(CropRow cropRow) {
     }
@@ -36,6 +41,11 @@ public class Tractor implements Vehicle_Interface {
 
     @Override
     public Boolean hasBeenRidden() {
+        return null;
+    }
+
+    @Override
+    public Person addRider() {
         return null;
     }
 }
