@@ -1,63 +1,49 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Edible;
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
+import sun.jvm.hotspot.oops.Array;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-
-public class CropRow<T extends Crop> {
-    List<T> cropRow;
+import java.util.ListIterator;
 
 
-    public CropRow(){
-        this.cropRow = new ArrayList<>();
+public class CropRow extends ArrayList<Crop> implements Produce_Interface {
+
+
+    boolean isFertilized;
+    boolean isHarvested;
+    boolean isWatered;
+
+    public Boolean hasBeenFertilized(){
+        return isFertilized;
     }
 
-    public CropRow( ArrayList<T> newRow){
-        this.cropRow = newRow;
+    public Boolean hasBeenHarvested(){
+        return isHarvested;
     }
 
-    public void addCrop(T crop) {
-        this.cropRow.add(crop);
-
+    public Boolean hasBeenWatered(){
+        return isWatered;
     }
 
-    public int getCropRowSize() {
-        return this.cropRow.size();
+    public void fertilize(){
+        this.isFertilized = true;
     }
 
-    public boolean isRowEmpty() {
-        return cropRow.isEmpty();
+    public void harvest(){
+        this.isHarvested = true;
     }
 
-    public boolean hasBeenFertilized() {
-        return hasRowFertilized;
+    public void waterCrops(){
+        this.isWatered = true;
     }
-
-    public void fertilizeRow(CropRow cr) {
-//        for(T crop: this.cropRow){
-//            crop.fertilize();
-        cr.hasRowFertilized = true;
-//        }
-        // isRowFertilized =true;
-    }
-
-    public boolean hasBeenHarvested() {
-        return hasRowHarvested;
-    }
-
-    public void harvestRow(CropRow cr) {
-//        for(T crop: this.cropRow){
-//            crop.harvest();
-        cr.hasRowHarvested = true;
-//        }
-//        isRowHarvested =true;
-    }
-
-    public boolean hasBeenWatered() {
-        return hasRowWatered;
-    }
-
-    public void waterRow(CropRow cr) {
-        cr.hasRowWatered = true;
-    }
-
 }
+
+// size method, return how many crops are in the row
+// is empty, same as above just a boolean if its empty
+
+

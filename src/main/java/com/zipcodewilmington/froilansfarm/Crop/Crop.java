@@ -20,14 +20,21 @@ public abstract class Crop implements Produce_Interface {
 
 
 
+    public Boolean hasBeenWatered(){
+        return isWatered;
+    }
+
     public void fertilize(){
         this.isFertilized = true;
     }
 
     public void harvest(){
         this.isHarvested = true;
+
     }
-    public void water(){
+
+    public void waterCrops(){
         this.isWatered = true;
     }
 }
+
