@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Shelter;
 
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
+import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Food.Apple;
 
 import java.util.ArrayList;
 public class Shelter<T extends Animal> {

@@ -9,8 +9,6 @@ public class Person extends Animal {
         super(name);
     }
 
-    public void add(Person  person) {
-    }
 
     public String getName() {
         return name;
