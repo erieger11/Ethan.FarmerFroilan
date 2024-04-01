@@ -1,8 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Person.Person;
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Botanist_Interface;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Rideable_Interface;
 
-public class Charizard extends Animal implements Rideable_Interface {
+public class Charizard extends Animal implements Rideable_Interface, Botanist_Interface {
     String type;
     Double id;
     public Charizard(String name,String type, Double id) {
@@ -33,7 +35,34 @@ public class Charizard extends Animal implements Rideable_Interface {
         return "RAWRRRRR!!!";
     }
 
-    public void burnCrops(CropRow croprow) {
+
+    @Override
+    public Boolean hasBeenRidden() {
+        return null;
+    }
+
+    @Override
+    public Person addRider() {
+        return null;
+    }
+
+    @Override
+    public void plant(CropRow croprow) {
+
+    }
+
+    @Override
+    public void water(CropRow croprow) {
+
+    }
+
+    @Override
+    public void nurture(CropRow croprow) {
+
+    }
+
+    @Override
+    public void burn(CropRow croprow) {
         croprow.hasBeenBurned = true;
     }
 }
