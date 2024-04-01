@@ -13,7 +13,7 @@ public class AircraftTest {
     @Before
     public void setup(){
         airCraft = new AirCraft();
-        pilot = new Pilot();
+        pilot = new Pilot("Froilan");
         cropRow = new CropRow();
     }
 
@@ -43,7 +43,7 @@ public class AircraftTest {
     }
     @Test
     public void addRiderTest(){
-        airCraft.addRider(pilot);
+        airCraft.addRider();
 
         Assert.assertTrue(airCraft.hasRidder());
     }

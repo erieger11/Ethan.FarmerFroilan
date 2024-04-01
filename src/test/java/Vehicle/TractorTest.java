@@ -14,12 +14,12 @@ public class TractorTest {
     public void setup(){
         tractor = new Tractor();
         cropRow = new CropRow();
-        pilot = new Pilot();
+        pilot = new Pilot("Froilan");
     }
 
     @Test
     public void testInheritance(){
-        Assert.assertTrue(tractor != null);
+        Assert.assertNotNull(tractor);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class TractorTest {
     public void removeRiderTest(){
         tractor.addRider(pilot);
         tractor.fertilize(cropRow);
-        Assert.assertTrue(tractor.beenFertalized());
+        Assert.assertTrue(tractor.haspilot);
     }
 
 }
