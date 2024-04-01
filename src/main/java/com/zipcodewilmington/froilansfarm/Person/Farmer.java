@@ -20,10 +20,7 @@ public class Farmer extends Person implements Rider_Interface, Botanist_Interfac
     }
 
     @Override
-    public void plant() {
-
-    }
-
+    public void plant() {}
     @Override
     public void water() {
 

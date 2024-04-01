@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Person;
 
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
-import com.zipcodewilmington.froilansfarm.Food.Tomato;
 
 public class Person extends Animal {
     String name;
@@ -14,7 +13,6 @@ public class Person extends Animal {
     }
 
     public String getName() {
-
         return name;
     }
 

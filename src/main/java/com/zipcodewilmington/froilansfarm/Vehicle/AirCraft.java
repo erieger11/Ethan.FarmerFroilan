@@ -22,6 +22,10 @@ public class AirCraft implements Vehicle_Interface, Rideable_Interface {
     }
 
     @Override
+    public void addRider(Person person) {
+
+    }
+    @Override
     public Person addRider() {
         return null;
     }
@@ -30,7 +34,6 @@ public class AirCraft implements Vehicle_Interface, Rideable_Interface {
     public void removeRider() {
 
     }
-
     public void fly() {
     }
 
