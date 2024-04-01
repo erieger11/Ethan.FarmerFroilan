@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm.Animals;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Botanist_Interface;
 
-public class Squirtle extends Animal {
+public class Squirtle extends Animal implements Botanist_Interface {
     String type;
     Double id;
 
@@ -33,8 +33,23 @@ public class Squirtle extends Animal {
     public String makeNoise(){
         return "SQUIRTLEEEEE!!!";
     }
-    public void waterCrops (CropRow croprow) {
+
+    @Override
+    public void plant(CropRow croprow) {
+
+    }
+    @Override
+    public void water(CropRow croprow) {
         croprow.hasBeenWatered = true;
     }
 
+    @Override
+    public void nurture(CropRow croprow) {
+
+    }
+
+    @Override
+    public void burn(CropRow croprow) {
+
+    }
 }

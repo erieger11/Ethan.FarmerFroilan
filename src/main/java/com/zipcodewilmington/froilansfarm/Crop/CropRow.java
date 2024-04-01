@@ -5,9 +5,7 @@ import java.util.List;
 
 public class CropRow<T extends Crop> {
     List<T> cropRow;
-    private boolean hasRowWatered = false;
-    private  boolean hasRowFertilized = false;
-    private boolean hasRowHarvested = false;
+
 
     public CropRow(){
         this.cropRow = new ArrayList<>();

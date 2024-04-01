@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Animals;
-
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Botanist_Interface;
 
-public class Bulbasaur extends Animal {
+public class Bulbasaur extends Animal implements Botanist_Interface {
     String type;
     Double id;
     public Bulbasaur(String name,String type, Double id) {
@@ -32,8 +32,20 @@ public class Bulbasaur extends Animal {
         return "BULBASAUR!!!";
     }
 
-    public void nurtureCrops(CropRow croprow) {
+    @Override
+    public void plant(CropRow croprow) {}
+
+    @Override
+    public void water(CropRow croprow) {}
+
+    @Override
+    public void nurture(CropRow croprow) {
         croprow.hasBeenNurtured = true;
+    }
+
+    @Override
+    public void burn(CropRow croprow) {
+
     }
 
 }
