@@ -8,5 +8,3 @@ public interface Eater_Interface<EdibleType> {
         return food.get(food) - amountOfEat;
       }
     }
-  }
-}
