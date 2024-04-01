@@ -1,14 +1,13 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-import com.zipcodewilmington.froilansfarm.Food.Edible;
+
+import com.zipcodewilmington.froilansfarm.TheInterfaces.Edible;
 
 public class DragonfruitTree extends Crop {
     @Override
     public Edible yield() {
-        if(hasBeenFertilized() && !hasBeenHarvested()){
-//            return new Dragonfruit();
-        }
-
         return null;
     }
 }
+
+// return what's in the array list of crops into storage as food.
