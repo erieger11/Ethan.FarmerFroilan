@@ -39,4 +39,14 @@ public class Rapidash extends Animal implements Rideable_Interface {
 
     public void addRider(Person froilan) {
     }
+
+    @Override
+    public Boolean hasBeenRidden() {
+        return null;
+    }
+
+    @Override
+    public Person addRider() {
+        return null;
+    }
 }
