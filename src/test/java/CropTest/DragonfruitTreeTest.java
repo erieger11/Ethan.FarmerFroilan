@@ -1,81 +1,81 @@
 package CropTest;
+import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
-import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.Crop.WatermelonVine;
-import com.zipcodewilmington.froilansfarm.Food.Tomato;
-import com.zipcodewilmington.froilansfarm.Food.Watermelon;
+import com.zipcodewilmington.froilansfarm.Crop.DragonfruitTree;
+import com.zipcodewilmington.froilansfarm.Food.Dragonfruit;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class WatermelonVineTest {
+public class DragonfruitTreeTest {
+
 
 
     @Test
     public void testInheritance(){
-        WatermelonVine watermelonVine = new WatermelonVine();
-        Assert.assertTrue(true);
+        DragonfruitTree dragonfruitTree = new DragonfruitTree();
+        Assert.assertTrue(dragonfruitTree instanceof Crop);
     }
 
     @Test
     public void testYield1(){
-        WatermelonVine watermelonVine = new WatermelonVine();
-        watermelonVine.fertilize();
-        Assert.assertTrue(watermelonVine.yield() instanceof Watermelon);
+        DragonfruitTree dragonfruitTree = new DragonfruitTree();
+        dragonfruitTree.fertilize();
+        Assert.assertTrue(dragonfruitTree.yield() instanceof Dragonfruit);
     }
 
     @Test
     public void testBeenHarvested() {
-        Crop crop = new WatermelonVine();
-        WatermelonVine watermelonVine = new WatermelonVine();
+        Crop crop = new DragonfruitTree();
+        DragonfruitTree dragonFruitTree = new DragonfruitTree();
         Tractor tractor = new Tractor();
 
-        tractor.harvest(watermelonVine);
+        tractor.harvest(dragonFruitTree);
 
-        Assert.assertTrue(watermelonVine.hasBeenHarvested());
+        Assert.assertTrue(dragonFruitTree.hasBeenHarvested());
     }
 
     @Test
     public void testHarvest() {
-        Crop crop = new WatermelonVine();
-        WatermelonVine watermelonVine = new WatermelonVine();
+        Crop crop = new DragonfruitTree();
+        DragonfruitTree dragonFruitTree = new DragonfruitTree();
         Tractor tractor = new Tractor();
 
-        tractor.harvest(watermelonVine);
+        tractor.harvest(dragonFruitTree);
 
-        Assert.assertTrue(watermelonVine.hasBeenHarvested());
+        Assert.assertTrue(dragonFruitTree.hasBeenHarvested());
     }
 
     @Test
     public void testFertilize(){
-        Crop crop = new WatermelonVine();
-        WatermelonVine watermelonVine = new WatermelonVine();
-        CropRow<Watermelon> rowOne = new CropRow<>();
+        Crop crop = new DragonfruitTree();
+        DragonfruitTree dragonFruitTree = new DragonfruitTree();
+        CropRow<DragonfruitTree> rowOne = new CropRow<>();
         CropDuster cropDuster = new CropDuster();
 
         cropDuster.fertilize(rowOne);
 
-        Assert.assertTrue(watermelonVine.hasBeenFertilized());
+        Assert.assertTrue(dragonFruitTree.hasBeenFertilized());
     }
 
     @Test
     public void testBeenFertilized(){
-        Crop crop = new WatermelonVine();
-        WatermelonVine watermelonVine = new WatermelonVine();
-        CropRow<Watermelon> rowOne = new CropRow<>();
+        Crop crop = new DragonfruitTree();
+        DragonfruitTree dragonFruitTree = new DragonfruitTree();
+        CropRow<DragonfruitTree> rowOne = new CropRow<>();
         CropDuster cropDuster = new CropDuster();
 
         cropDuster.fertilize(rowOne);
 
-        Assert.assertTrue(watermelonVine.hasBeenFertilized());
+        Assert.assertTrue(dragonFruitTree.hasBeenFertilized());
     }
 
 
 //    @Test
 //    public void testHarvest(){
-//        Crop crop = new WatermelonVine();
+//        Crop crop = new DragonfruitTree();
 //        Assert.assertFalse(crop.hasBeenHarvested());
 //
 //        crop.harvest();
@@ -85,7 +85,7 @@ public class WatermelonVineTest {
 //
 //    @Test
 //    public void testHasBeenHarvested() {
-//        Crop crop = new WatermelonVine();
+//        Crop crop = new DragonfruitTree();
 //        Assert.assertFalse(crop.hasBeenHarvested());
 //
 //        crop.harvest();
@@ -94,7 +94,7 @@ public class WatermelonVineTest {
 //
 //    @Test
 //    public void testFertilize(){
-//        Crop crop = new WatermelonVine();
+//        Crop crop = new DragonfruitTree();
 //        Assert.assertFalse(crop.hasBeenFertilized());
 //
 //        crop.fertilize();
@@ -104,16 +104,10 @@ public class WatermelonVineTest {
 //
 //    @Test
 //    public void testHasBeenFertilized() {
-//        Crop crop = new WatermelonVine();
+//        Crop crop = new DragonfruitTree();
 //        Assert.assertFalse(crop.hasBeenFertilized());
 //
 //        crop.fertilize();
 //        Assert.assertTrue(crop.hasBeenFertilized());
 //    }
-//
-
-
-
-
-
 }
