@@ -4,7 +4,6 @@ import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 
 
-
 public class CropDuster {
     public boolean hasPilot;
 

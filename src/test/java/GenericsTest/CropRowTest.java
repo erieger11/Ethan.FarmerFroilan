@@ -1,4 +1,5 @@
 package GenericsTest;
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -55,17 +56,6 @@ public class CropRowTest {
     public void testRowEmpty(){
 
      }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
