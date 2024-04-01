@@ -1,33 +1,38 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
+import com.zipcodewilmington.froilansfarm.Food.Apple;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Edible;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
 
 public abstract class Crop implements Produce_Interface {
-    private boolean isFertilized = false;
-    private boolean isHarvested = false;
+    boolean isFertilized;
+    boolean isHarvested;
+    boolean isWatered;
+
     public abstract Edible yield();
 
-    public boolean hasBeenFertilized(){
-
+    public Boolean hasBeenFertilized(){
         return isFertilized;
-
     }
 
-    public boolean hasBeenHarvested(){
-
+    public Boolean hasBeenHarvested(){
         return isHarvested;
     }
 
+    public Boolean hasBeenWatered(){
+        return isWatered;
+    }
+
     public void fertilize(){
-        isFertilized = true;
+        this.isFertilized = true;
     }
 
     public void harvest(){
-
-        isHarvested = true;
+        this.isHarvested = true;
     }
-    //hi
 
-
+    public void waterCrops(){
+        this.isWatered = true;
+    }
 }
+
