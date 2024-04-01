@@ -32,7 +32,6 @@ public class AppleTest
 
         //Given
         Person person = new Person(null);
-        Apple apple = new Apple();
         Storage storage = new Storage();
 
         //When
