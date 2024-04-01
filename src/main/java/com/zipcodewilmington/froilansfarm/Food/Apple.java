@@ -28,3 +28,4 @@ public class Apple implements Edible
         return "Apple";
     }
 }
+//return food.get(food) - amountOfEat;

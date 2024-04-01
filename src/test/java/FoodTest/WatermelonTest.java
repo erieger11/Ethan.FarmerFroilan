@@ -39,7 +39,6 @@ public class WatermelonTest
 
         //Given
         Person person = new Person(null);
-        Watermelon watermelon = new Watermelon();
         Storage storage = new Storage();
 
         //When

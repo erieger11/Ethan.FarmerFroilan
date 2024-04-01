@@ -4,9 +4,6 @@ package PersonTest;
 
 import com.zipcodewilmington.froilansfarm.Person.Person;
 
-import com.zipcodewilmington.froilansfarm.Person.Person;
-import com.zipcodewilmington.froilansfarm.Person.Pilot;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -37,7 +34,7 @@ public class PersonTest {
     public void setNameTest(){;
         String expectedName = "froilanda";
         person.add(person);
-        person.setName("froilanda");
+        person.setName();
         String actualName = person.getName();
 
         Assert.assertEquals(expectedName, actualName);
@@ -45,7 +42,7 @@ public class PersonTest {
     @Test
     public void getNameTest(){
         String expectedName = "Froilan";
-        person.setName("Froilan");
+        person.setName();
         String actualName = person.getName();
 
         Assert.assertEquals(expectedName, actualName);

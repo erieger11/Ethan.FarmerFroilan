@@ -32,7 +32,6 @@ public class DragonfruitTest
 
         //Given
         Person person = new Person(null);
-        Dragonfruit dragonfruit = new Dragonfruit();
         Storage storage = new Storage();
 
         //When

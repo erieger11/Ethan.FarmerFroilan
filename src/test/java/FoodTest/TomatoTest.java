@@ -7,8 +7,11 @@ import com.zipcodewilmington.froilansfarm.Crop.Storage;
 import com.zipcodewilmington.froilansfarm.Food.Edible;
 
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
+import com.zipcodewilmington.froilansfarm.Person.Person;
 import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 public class TomatoTest
 {
@@ -17,19 +20,19 @@ public class TomatoTest
 public void testToString()
 {
     Tomato tomato = new Tomato();
-    Assert.assertTrue(tomato.toString().equals("Tomato"));
+    assertTrue(tomato.toString().equals("Tomato"));
 }
 @Test
 public void testHasBeenHarvested()
 {
     Tomato tomato = new Tomato();
-    Assert.assertTrue(tomato.hasBeenHarvested());
+    assertTrue(tomato.hasBeenHarvested());
 }
 @Test
 public void testHasBeenFertilized()
 {
     Tomato tomato = new Tomato();
-    Assert.assertTrue(tomato.hasBeenFertilized());
+    assertTrue(tomato.hasBeenFertilized());
 }
 ////package com.zipcodewilmington.froilansfarm.Crop.edibles;
 //

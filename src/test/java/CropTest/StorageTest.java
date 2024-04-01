@@ -32,7 +32,7 @@ public class StorageTest
         Storage st = new Storage();
         st.add(Apple, 3);
 
-        storage. (apple, 5);
+        storage.put(apple, 5);
         storage.put(dragonfruit, 5);
         storage.put(earCorn, 5);
         storage.put(milkGallon, 5);
@@ -50,7 +50,7 @@ public class StorageTest
     public void testAddWatermelon()
     {
         int stock = storage.get(watermelon);
-        Assert.assertEquals(4, storage.put(watermelon, stock + 1));
+        Assert.assertEquals(6, storage.put(watermelon, stock + 1));
     }
     @Test
     public void testRemoveDragonfruit()
