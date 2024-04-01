@@ -4,41 +4,35 @@ import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 
 
-public class CropDuster {
-    public boolean hasPilot;
-
-    public void addRider(Pilot pilot) {
-    }
+public class CropDuster extends AirCraft{
 
     public void addPilot(Pilot pilot) {
+        super.addPilot(pilot);
     }
 
     public void fly() {
+        super.fly();
     }
 
-    public boolean hasBeenRidden() {
-        return false;
+    public Boolean hasBeenRidden() {
+        return super.hasBeenRidden();
     }
 
-    public String MakeNoise() {
-        return null;
-    }
 
     public String makeNoise() {
-        return null;
+        return "Vroom";
     }
 
     public boolean hasRidder() {
-        return false;
+        return super.hasRidder();
     }
 
-    public boolean beenFertalized() {
-        return false;
-    }
 
     public void fertilize(CropRow cropRow) {
+        super.fertilize(cropRow);
     }
 
     public void removeRider() {
+        super.removeRider();
     }
 }
