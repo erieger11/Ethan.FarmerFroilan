@@ -33,7 +33,6 @@ public class EarCornTest
 
         //Given
         Person person = new Person(null);
-        EarCorn earCorn = new EarCorn();
         Storage storage = new Storage();
 
         //When
