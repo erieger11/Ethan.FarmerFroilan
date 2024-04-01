@@ -1,16 +1,15 @@
 package com.zipcodewilmington.froilansfarm.TheInterfaces;
 
-import com.zipcodewilmington.froilansfarm.Food.Edible;
-
+import com.zipcodewilmington.froilansfarm.Food.*;
+import com.zipcodewilmington.froilansfarm.Crop.Storage;
 
 public interface Eater_Interface<EdibleType> {
-    void eat(EarCorn earCorn, int i);
-    public Boolean eat(Integer amountOfEat, EdibleType edibleType);
+    public default Integer eat(Storage storage, Food food, Integer amountOfEat){
 
-public interface Eater_Interface {
+        return storage.put(food, storage.get(food) - amountOfEat);
 
-    public static Integer eat(Edible<T> food, Integer valueToChange) {
-        return food.get() - valueToChange;
+       // return storage.get(food) - amountOfEat;
     }
-
 }
+
+
