@@ -13,15 +13,13 @@ public class Tractor {
         return null;
     }
 
-    public void removeRider() {
+    public boolean removeRider() {
+        return false;
     }
 
     public void fertilize(CropRow cropRow) {
     }
 
-    public boolean beenFertalized() {
-        return false;
-    }
 
     public void addRider(Pilot pilot) {
     }
