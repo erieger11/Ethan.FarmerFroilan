@@ -16,7 +16,7 @@ public class CropRow extends ArrayList<Crop> implements Produce_Interface {
 
     boolean isFertilized;
     boolean isHarvested;
-    boolean isWatered;
+    public boolean isWatered;
 
     public Boolean hasBeenFertilized(){
         return isFertilized;
