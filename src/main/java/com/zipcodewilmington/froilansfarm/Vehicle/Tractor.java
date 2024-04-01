@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
@@ -29,7 +30,7 @@ public class Tractor implements Vehicle_Interface {
 //        return false;
 //    }
 
-    public void fertilize(CropRow cropRow) {
+    public void fertilize(CropRow<Crop> cropRow) {
     }
 
 

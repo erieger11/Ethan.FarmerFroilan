@@ -1,7 +1,6 @@
 package ShelterTest;
-import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
 import com.zipcodewilmington.froilansfarm.Animals.Miltank;
-import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
+import com.zipcodewilmington.froilansfarm.Storages.Shelter;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,8 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 import com.zipcodewilmington.froilansfarm.Food.Food;
-import com.zipcodewilmington.froilansfarm.Food.MilktankMilkGallon;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
-import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Storages.Storage;
 
 public class Miltank extends Animal implements Produce_Interface {
     String type;

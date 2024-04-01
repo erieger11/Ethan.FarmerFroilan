@@ -1,5 +1,5 @@
 package FoodTest;
-import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Storages.Storage;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import org.junit.Assert;
@@ -30,7 +30,7 @@ public void testHasBeenFertilized()
 }
 ////package com.zipcodewilmington.froilansfarm.Crop.edibles;
 //
-//import com.zipcodewilmington.froilansfarm.Crop.Storage;
+//import com.zipcodewilmington.froilansfarm.Storages.Storage;
 ////import com.zipcodewilmington.froilansfarm.Food.Edible;
 //import com.zipcodewilmington.froilansfarm.Food.Tomato;
 ////import com.zipcodewilmington.froilansfarm.crops.edibles.Tomato;

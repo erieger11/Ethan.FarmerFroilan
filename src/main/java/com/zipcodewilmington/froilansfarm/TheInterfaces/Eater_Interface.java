@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.TheInterfaces;
 import com.zipcodewilmington.froilansfarm.Food.*;
-import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Storages.Storage;
 
 public interface Eater_Interface<EdibleType> {
 

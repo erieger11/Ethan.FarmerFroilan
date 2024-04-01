@@ -1,5 +1,6 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Squirtle;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import org.junit.Assert;
 import org.junit.Test;
@@ -71,7 +72,7 @@ public class SquirtleTest {
     @Test
     public void waterCropRowTest() {
         Squirtle squirtle = new Squirtle(null, null, null);
-        CropRow cr =  new CropRow();
+        CropRow<Crop> cr =  new CropRow<Crop>();
         squirtle.waterCrops(cr);
         Assert.assertTrue(cr.hasBeenWatered);
     }

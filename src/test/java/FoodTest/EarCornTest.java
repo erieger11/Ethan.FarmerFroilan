@@ -2,7 +2,7 @@ package FoodTest;
 
 
 
-import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Storages.Storage;
 
 import com.zipcodewilmington.froilansfarm.Food.EarCorn;
 import com.zipcodewilmington.froilansfarm.Food.Edible;

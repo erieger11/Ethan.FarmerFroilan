@@ -2,11 +2,12 @@ package com.zipcodewilmington.froilansfarm.Crop;
 
 
 import com.zipcodewilmington.froilansfarm.Food.Dragonfruit;
+import com.zipcodewilmington.froilansfarm.Storages.Storage;
 
 
 public class DragonfruitTree extends Crop {
 
-    public void yield(CropRow cropRow, Storage storage) {
+    public void yield(CropRow<Crop> cropRow, Storage storage) {
         if (hasBeenWatered() && hasBeenFertilized() && hasBeenHarvested()) {
             storage.add(new Dragonfruit(), cropRow.size());
         }

@@ -1,6 +1,6 @@
 package ShelterTest;
 import com.zipcodewilmington.froilansfarm.Person.Person;
-import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
+import com.zipcodewilmington.froilansfarm.Storages.Shelter;
 import org.junit.Assert;
 import org.junit.Test;
 

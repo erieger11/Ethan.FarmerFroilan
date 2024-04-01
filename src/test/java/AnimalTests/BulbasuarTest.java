@@ -1,6 +1,7 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
 import com.zipcodewilmington.froilansfarm.Animals.Bulbasaur;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import org.junit.Assert;
 import org.junit.Test;
@@ -72,7 +73,7 @@ public class BulbasuarTest {
     @Test
     public void nurtureCropRowTest() {
         Bulbasaur bulbasaur = new Bulbasaur(null, null, null);
-        CropRow cr =  new CropRow();
+        CropRow<Crop> cr =  new CropRow<Crop>();
         bulbasaur.nurture(cr);
         Assert.assertTrue(cr.hasBeenNurtured);
     }

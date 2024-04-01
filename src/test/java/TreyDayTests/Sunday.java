@@ -1,4 +1,5 @@
 package TreyDayTests;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Food.Dragonfruit;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
@@ -13,7 +14,7 @@ public class Sunday {
 
 @Test
 public void firstRowPlanted() {
-  CropRow<Tomato> rowOne = new CropRow();
+  CropRow<Tomato> rowOne = new CropRow<Crop>();
   Farmer froilan = new Farmer();
   TomatoPlant tomatoPlant = new TomatoPlant();
 
@@ -24,7 +25,7 @@ public void firstRowPlanted() {
 
 @Test
 public void secondRowPlanted() {
-  CropRow<Dragonfruit> rowTwo = new CropRow();
+  CropRow<Dragonfruit> rowTwo = new CropRow<Crop>();
   Farmer froilan = new Farmer();
   DragonfruitPlant dragonfruitPlant = new DragonfruitPlant();
 
@@ -35,7 +36,7 @@ public void secondRowPlanted() {
 
 @Test
 public void thirdRowPlanted() {
-  CropRow<WatermelonVine> rowThree = new CropRow();
+  CropRow<WatermelonVine> rowThree = new CropRow<Crop>();
   Farmer froilan = new Farmer();
   WatermelonVine watermelonPlant = new WatermelonVine();
 

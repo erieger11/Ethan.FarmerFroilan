@@ -1,9 +1,10 @@
 package TreyDayTests;
 
 import com.zipcodewilmington.froilansfarm.Animals.Rapidash;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Food.EarCorn;
-import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Storages.Storage;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
@@ -14,7 +15,7 @@ import org.junit.Test;
 public class TuesdayTest {
     Storage storage;
     Tractor tractor;
-    CropRow cropRow;
+    CropRow<Crop> cropRow;
     EarCorn earCorn;
  //   Storage storage;
     Person froilan;
@@ -24,7 +25,7 @@ public class TuesdayTest {
     @Before
     public void setup(){
         tractor = new Tractor();
-        cropRow = new CropRow();
+        cropRow = new CropRow<Crop>();
         earCorn = new EarCorn();
         storage = new Storage();
        rapidash = new Rapidash(null,null,null);

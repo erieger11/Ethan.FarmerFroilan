@@ -1,5 +1,6 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Charizard;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Rideable_Interface;
 import org.junit.Assert;
@@ -76,7 +77,7 @@ public class CharizardTest {
     @Test
     public void burnRowTest() {
         Charizard charizard = new Charizard(null, null, null);
-        CropRow cr =  new CropRow();
+        CropRow<Crop> cr =  new CropRow<Crop>();
         charizard.burn(cr);
         Assert.assertTrue(cr.hasBeenBurned);
     }

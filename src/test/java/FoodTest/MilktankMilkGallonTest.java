@@ -1,17 +1,11 @@
 package FoodTest;
-import com.zipcodewilmington.froilansfarm.Crop.Storage;
 
-import com.zipcodewilmington.froilansfarm.Food.Dragonfruit;
 import com.zipcodewilmington.froilansfarm.Food.MilktankMilkGallon;
 
 import com.zipcodewilmington.froilansfarm.Food.Edible;
 
-import com.zipcodewilmington.froilansfarm.Person.Person;
-import com.zipcodewilmington.froilansfarm.TheInterfaces.Edible;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class MilktankMilkGallonTest
 {

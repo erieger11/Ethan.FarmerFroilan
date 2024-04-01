@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animals;
-import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Storages.Storage;
 import com.zipcodewilmington.froilansfarm.Food.Food;
-import com.zipcodewilmington.froilansfarm.Food.TogekissEgg;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
 
 public class Togekiss extends Animal implements Produce_Interface {

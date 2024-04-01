@@ -1,4 +1,5 @@
 package Vehicle;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
@@ -8,12 +9,12 @@ import org.junit.Test;
 
 public class TractorTest {
     Tractor tractor;
-    CropRow cropRow;
+    CropRow<Crop> cropRow;
     Pilot pilot;
     @Before
     public void setup(){
         tractor = new Tractor();
-        cropRow = new CropRow();
+        cropRow = new CropRow<Crop>();
         pilot = new Pilot("Froilan");
     }
 

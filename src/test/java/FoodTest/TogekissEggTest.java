@@ -1,12 +1,10 @@
 package FoodTest;
-import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Storages.Storage;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 
 import com.zipcodewilmington.froilansfarm.Food.TogekissEgg;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class TogekissEggTest
 {

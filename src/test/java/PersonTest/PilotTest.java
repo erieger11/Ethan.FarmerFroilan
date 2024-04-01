@@ -1,4 +1,5 @@
 package PersonTest;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
@@ -8,13 +9,13 @@ import org.junit.Test;
 public class PilotTest {
     Pilot pilot;
     CropDuster cropDuster;
-    CropRow cropRow;
+    CropRow<Crop> cropRow;
 
     @Before
     public void setup(){
         pilot = new Pilot(null);
         cropDuster = new CropDuster();
-        cropRow = new CropRow();
+        cropRow = new CropRow<Crop>();
     }
 
     @Test

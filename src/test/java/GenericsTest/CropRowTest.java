@@ -1,22 +1,18 @@
 package GenericsTest;
-import CropTest.TomatoPlantTest;
-import PersonTest.FarmerTest;
 import com.zipcodewilmington.froilansfarm.Animals.Squirtle;
 import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
-import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import com.zipcodewilmington.froilansfarm.Person.Farmer;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 public class CropRowTest {
 
-
+   @Before
     public void testCropRow(){
         CropRow<Crop> croprow = new CropRow<Crop>();
         Assert.assertTrue(croprow instanceof Crop);

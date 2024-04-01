@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Person.Person;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
@@ -43,6 +44,6 @@ public class AirCraft implements Vehicle_Interface, Rideable_Interface {
     }
 
 
-    public void fertilize(CropRow cropRow) {
+    public void fertilize(CropRow<Crop> cropRow) {
     }
 }

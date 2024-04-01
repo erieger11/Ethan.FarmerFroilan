@@ -1,23 +1,16 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-import com.zipcodewilmington.froilansfarm.Food.Food;
-import com.zipcodewilmington.froilansfarm.TheInterfaces.Edible;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
-import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
-import sun.jvm.hotspot.oops.Array;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 
-public class CropRow extends ArrayList<Crop> implements Produce_Interface {
+public class CropRow<T extends ArrayList<Crop>>  implements Produce_Interface {
 
 ArrayList<Crop> plant = new ArrayList<>();
     boolean isFertilized;
     boolean isHarvested;
-    public boolean isWatered;
+//    public boolean isWatered;
 
     public Boolean hasBeenFertilized(){
         return isFertilized;
@@ -27,9 +20,9 @@ ArrayList<Crop> plant = new ArrayList<>();
         return isHarvested;
     }
 
-    public Boolean hasBeenWatered(){
-        return isWatered;
-    }
+//    public Boolean hasBeenWatered(){
+//        return isWatered;
+//    }
 
     public void fertilize(){
         this.isFertilized = true;
@@ -39,9 +32,9 @@ ArrayList<Crop> plant = new ArrayList<>();
         this.isHarvested = true;
     }
 
-    public void waterCrops(){
-        this.isWatered = true;
-    }
+//    public void waterCrops(){
+//        this.isWatered = true;
+//    }
 
 }
 

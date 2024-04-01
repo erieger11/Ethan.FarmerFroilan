@@ -1,13 +1,10 @@
 package AnimalTests;
 import com.zipcodewilmington.froilansfarm.Animals.Miltank;
-import com.zipcodewilmington.froilansfarm.Crop.Storage;
+import com.zipcodewilmington.froilansfarm.Storages.Storage;
 import com.zipcodewilmington.froilansfarm.TheInterfaces.Produce_Interface;
 import org.junit.Assert;
 import org.junit.Test;
 import com.zipcodewilmington.froilansfarm.Animals.Animal;
-
-import static com.zipcodewilmington.froilansfarm.Animals.Rufflet.hasBeenFertilized;
-import static com.zipcodewilmington.froilansfarm.Animals.Rufflet.hasBeenHarvested;
 
 
 public class MiltankTest {
